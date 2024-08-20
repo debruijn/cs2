@@ -96,8 +96,6 @@ def create_rankings():
     raw_rankings = data.filter(like='rank')
     combined = aggregate_ranking(raw_rankings, rank_based_rankings.filter(like='rank_by_'),
                                                            score_based_rankings.filter(like='rank_by_'))
-    aggregate_rank = combined[['mean_combined_rank', 'aggregate_rank']]
-    aggregate_rank.to_csv('aggregate_rank.csv')
 
     # Save all rankings combined
     if not filefolder_exists('output'):

@@ -82,6 +82,7 @@ motivation for the second alignment is that it is the transformation that turned
 the three rankings all follow the same pattern (roughly) from #1 to #30 using that `log_aligned` transformation, which 
 is not the case for any linear transformation. In this way, they all have the same weight in the calculations and can be
 treated equally. A summary of that exploratory process can be seen here:
+
 ![Summary of the exploraty process of why the log transformation makes the rankings 
 comparable](summary_motivation_log_transformation.gif).
 

@@ -81,8 +81,9 @@ The motivation for the first alignment is that it is the transformation that mad
 motivation for the second alignment is that it is the transformation that turned out to make sense looking at the data:
 the three rankings all follow the same pattern (roughly) from #1 to #30 using that `log_aligned` transformation, which 
 is not the case for any linear transformation. In this way, they all have the same weight in the calculations and can be
-treated equally. A summary of that exploratory process can be found in
-[this gif](summary_motivation_log_transformation.gif).
+treated equally. A summary of that exploratory process can be seen here:
+![Summary of the exploraty process of why the log transformation makes the rankings 
+comparable](summary_motivation_log_transformation.gif).
 
 Then, for both alignments, I convert them into new scores (and thus rankings) by taking either:
 - the sum, resulting in `rank_by_sum_lin_aligned` and `rank_by_sum_log_aligned`

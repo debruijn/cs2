@@ -80,7 +80,8 @@ on a linear scale so the log-transformation is skipped there.
 The motivation for the first alignment is that it is the transformation that made sense to me beforehand, whereas the 
 motivation for the second alignment is that it is the transformation that turned out to make sense looking at the data:
 the three rankings all follow the same pattern (roughly) from #1 to #30 using that `log_aligned` transformation, which 
-is not the case for any linear transformation. A summary of that exploratory process can be found in
+is not the case for any linear transformation. In this way, they all have the same weight in the calculations and can be
+treated equally. A summary of that exploratory process can be found in
 [this gif](summary_motivation_log_transformation.gif).
 
 Then, for both alignments, I convert them into new scores (and thus rankings) by taking either:

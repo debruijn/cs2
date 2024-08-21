@@ -85,6 +85,8 @@ treated equally. A summary of that exploratory process can be seen here:
 ![Summary of the exploraty process of why the log transformation makes the rankings 
 comparable](summary_motivation_log_transformation.gif).
 
+In this, E, H and V stand for ESL, HLTV and Valve respectively. 
+
 Then, for both alignments, I convert them into new scores (and thus rankings) by taking either:
 - the sum, resulting in `rank_by_sum_lin_aligned` and `rank_by_sum_log_aligned`
 - the median, resulting in `rank_by_median_lin_aligned` and `rank_by_median_log_aligned`

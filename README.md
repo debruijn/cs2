@@ -30,7 +30,7 @@ their repository as part of the process.
 `BeautifulSoup`.
 - The HLTV rankings are pubicly available on their website (see credits below), and are stored locally using the 
 `hltv-data` Python package. Note that this only includes the top 30 of HLTV since rankings >30 are not available on a
-single webpage.
+single webpage. Also note that for now I am using a local adjusted version of `hltv-data` until [this PR on Github](https://github.com/dchoruzy/hltv-data/pull/6) has been accepted.
 
 To make sure this project will not visit their web pages without reason, the loaded data is cached locally, in the 
 `aggregate_cs2_ranking/imported` folder. Then, when rerunning the scripts, the local version is used, unless these files

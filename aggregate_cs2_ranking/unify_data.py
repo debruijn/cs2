@@ -1,4 +1,6 @@
 import os
+from datetime import date
+import shutil
 from .import_data import filefolder_exists
 import pandas as pd
 pd.set_option('display.max_rows', 500)
@@ -12,6 +14,14 @@ def get_raw_data():
     valve = pd.read_pickle(path + 'valve_raw.pkl')
 
     return hltv, esl, valve
+
+
+def copy_to_date_folder(force=False):
+    date_string = str(date.today()).replace('-', '')
+    if force or not filefolder_exists(f'unified/{date_string}'):
+        os.makedirs(f'unified/{date_string}')
+        [shutil.copy(f'unified/{x}', f'unified/{date_string}/{x}')
+         for x in ['on_rank.pkl', 'on_team.pkl']]
 
 
 def run_unification():
@@ -47,6 +57,8 @@ def run_unification():
         os.mkdir('unified')
     unified_on_rank.to_pickle('unified/on_rank.pkl')
     unified_on_team.to_pickle('unified/on_team.pkl')
+
+    copy_to_date_folder()
 
 
 if __name__ == "__main__":

@@ -1,5 +1,7 @@
 import os
 import shutil
+import time
+from datetime import date
 import pandas as pd
 from hltv_data2 import HLTVClient2  # TODO: replace with hltv_data when PR is merged
 from bs4 import BeautifulSoup
@@ -25,7 +27,6 @@ def import_esl(force=False):
     page_source = client._get_page_source(base_url)
 
     # Wait to make sure page is loaded
-    import time
     time.sleep(10)
 
     if page_source:
@@ -60,7 +61,8 @@ def import_valve(force=False):
     os.chdir('tmp/')
     os.system('git clone git@github.com:ValveSoftware/counter-strike_regional_standings.git')
     os.chdir('counter-strike_regional_standings/live/2024/')
-    global_file = [x for x in os.listdir() if 'global' in x][0]
+    global_file = [x for x in os.listdir() if 'global' in x][-1]
+    print(f"Importing valve rankings from {global_file}.")
 
     # Read in global rankings
     with open(global_file, 'r') as f:
@@ -83,10 +85,19 @@ def import_valve(force=False):
     data.to_pickle('imported/valve_raw.pkl')
 
 
+def copy_to_date_folder(force=False):
+    date_string = str(date.today()).replace('-', '')
+    if force or not filefolder_exists(f'imported/{date_string}'):
+        os.makedirs(f'imported/{date_string}')
+        [shutil.copy(f'imported/{x}', f'imported/{date_string}/{x}')
+         for x in ['hltv_raw.pkl', 'esl_raw.pkl', 'valve_raw.pkl']]
+
+
 def import_data(force=False):
     import_hltv(force)
     import_esl(force)
     import_valve(force)
+    copy_to_date_folder(force)
 
 
 if __name__ == "__main__":

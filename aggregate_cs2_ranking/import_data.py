@@ -27,7 +27,7 @@ def import_esl(force=False):
     page_source = client._get_page_source(base_url)
 
     # Wait to make sure page is loaded
-    time.sleep(10)
+    time.sleep(2)
 
     if page_source:
         soup = BeautifulSoup(page_source, "html.parser")
@@ -61,7 +61,7 @@ def import_valve(force=False):
     os.chdir('tmp/')
     os.system('git clone git@github.com:ValveSoftware/counter-strike_regional_standings.git')
     os.chdir('counter-strike_regional_standings/live/2024/')
-    global_file = [x for x in os.listdir() if 'global' in x][-1]
+    global_file = sorted([x for x in os.listdir() if 'global' in x])[-1]
     print(f"Importing valve rankings from {global_file}.")
 
     # Read in global rankings

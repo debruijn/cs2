@@ -21,34 +21,35 @@ def import_esl(force=False):
     if not force and filefolder_exists('esl_raw.pkl', dir='imported'):
         return
 
-    # Use HLTV pulling client for ESL as well, with adjusted url of course
-    base_url = "https://pro.eslgaming.com/worldranking/csgo/rankings/"
-    client = HLTVClient2()
-    page_source = client._get_page_source(base_url)
+    success = False
+    while not success:
+        # Use HLTV pulling client for ESL as well, with adjusted url of course
+        base_url = "https://pro.eslgaming.com/worldranking/csgo/rankings/"
+        client = HLTVClient2()
+        page_source = client._get_page_source(base_url)
 
-    # Wait to make sure page is loaded
-    time.sleep(2)
+        if page_source:
+            soup = BeautifulSoup(page_source, "html.parser")
+            teams = soup.select("div[class*=RankingsTeamItem__Row-]")
 
-    if page_source:
-        soup = BeautifulSoup(page_source, "html.parser")
-        teams = soup.select("div[class*=RankingsTeamItem__Row-]")
+            rank, points, teamname = [], [], []
+            for team in teams:
+                try:  # First pull all numbers; in case of no error, add them all to the running lists
+                    this_pt = int(team.select('div[class*=Points]')[0].find("span").next.strip())
+                    this_name = str(team.select('div[class*=TeamName]')[0].select('a[class]')[0].next)
+                    this_rank = int(team.select('span[class*=WorldRankBadge__Number]')[0].next)
+                    points.append(this_pt)
+                    teamname.append(this_name)
+                    rank.append(this_rank)
+                except TypeError as e:
+                    print('Not succeeded: ', team, e)
 
-        rank, points, teamname = [], [], []
-        for team in teams:
-            try:  # First pull all numbers; in case of no error, add them all to the running lists
-                this_pt = int(team.select('div[class*=Points]')[0].find("span").next.strip())
-                this_name = str(team.select('div[class*=TeamName]')[0].select('a[class]')[0].next)
-                this_rank = int(team.select('span[class*=WorldRankBadge__Number]')[0].next)
-                points.append(this_pt)
-                teamname.append(this_name)
-                rank.append(this_rank)
-            except TypeError as e:
-                print('Not succeeded: ', team, e)
+            data = pd.DataFrame(data={'rank': rank, 'points': points, 'teamname': teamname})
+            if data.shape[0] > 30:
+                success = True
+                data.to_pickle('imported/esl_raw.pkl')
 
-        data = pd.DataFrame(data={'rank': rank, 'points': points, 'teamname': teamname})
-        data.to_pickle('imported/esl_raw.pkl')
-
-    client.driver.quit()
+        client.driver.quit()
 
 
 def import_valve(force=False):

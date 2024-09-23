@@ -28,8 +28,9 @@ def copy_to_date_folder(force=False):
 
 def run_unification():
     hltv, esl, valve = get_raw_data()
-    hltv = pd.DataFrame(hltv) if type(hltv) == list else hltv  # For compatibility; can be removed in future
     hltv = hltv.rename(columns={'position': 'rank', 'name': 'teamname'})
+    esl = esl.rename(columns={'position': 'rank', 'name': 'teamname'})
+    valve = valve.rename(columns={'position': 'rank', 'name': 'teamname'})
 
     # TODO: add in future a check on new teamnames - potentially reusing old team IDs or cores for automatically mapping
     teamname_mapping = pd.read_csv('teamname_mapping.csv').drop_duplicates()

@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-hltv-data = "*"
+cs-rankings = "*"
 beautifulsoup4 = "*"
 pandas = "*"
 tabulate = "*"

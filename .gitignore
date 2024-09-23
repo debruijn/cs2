@@ -3,6 +3,7 @@
 local/*
 plan
 *test*
+aggregate_cs2_ranking/tmp/
 
 ### Python template
 .idea

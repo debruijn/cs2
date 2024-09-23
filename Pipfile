@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 cs-rankings = "*"
-beautifulsoup4 = "*"
 pandas = "*"
 tabulate = "*"
 

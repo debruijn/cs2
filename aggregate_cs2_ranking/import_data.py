@@ -28,8 +28,8 @@ def copy_to_date_folder(force=False):
 def import_data(force=False):
     import_ranking(HLTVRankings, 'hltv', force)
     import_ranking(ESLRankings, 'esl', force)
-    import_ranking(ValveRankings, 'valve', True, assume_git=True, keep_repository=True)
-    copy_to_date_folder(True)
+    import_ranking(ValveRankings, 'valve', force, assume_git=True, keep_repository=True)
+    copy_to_date_folder(force)
 
 
 if __name__ == "__main__":

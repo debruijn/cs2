@@ -1,4 +1,4 @@
-from aggregate_cs2_ranking import import_data, run_unification, create_rankings, create_output
+from combined_cs2_rankings import import_data, run_unification, create_rankings, create_output
 
 
 def main():
@@ -18,5 +18,5 @@ def main():
 
 if __name__ == "__main__":
     import os
-    os.chdir('aggregate_cs2_ranking')
+    os.chdir('combined_cs2_rankings')
     main()

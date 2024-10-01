@@ -4,16 +4,16 @@ A project to combine the Counterstrike 2 rankings from ESL, HLTV and Valve.
 
 > I don't care about explanations, give me the rankings!
 
-Sure! You can find all kinds of combined rankings [here](aggregate_cs2_ranking/aggregate_ranking.md) and the recommended
-ranking and points [here](aggregate_cs2_ranking/optimal_score.md). If you then have questions, come back here.
+Sure! You can find all kinds of combined rankings [here](combined_cs2_rankings/all_combined_rankings.md) and the recommended
+ranking and points [here](combined_cs2_rankings/optimal_score.md). If you then have questions, come back here.
 
 # Goal of this project
 Combine the CS2 rankings from ESL, HLTV and Valve into a single ranking or score. Currently, I do both:
-- In the above linked [aggregate_ranking.md](aggregate_cs2_ranking/aggregate_ranking.md) I include all kinds of ranks, 
-from the raw ESL, HLTV and Valve rankings up to various combinations and transformations of the rankings and points of
-all three. More details down below in `Methodology`.
+- In the above linked [all_combined_rankings.md](combined_cs2_rankings/all_combined_rankings.md) I include all kinds of 
+ranks, from the raw ESL, HLTV and Valve rankings up to various combinations and transformations of the rankings and 
+points of all three. More details down below in `Methodology`.
 - My personal recommended ranking is shown together with its underlying score in 
-[optimal_score.md](aggregate_cs2_ranking/optimal_score.md). Ideally, this would be the standard ranking to use in CS2.
+[optimal_score.md](combined_cs2_rankings/optimal_score.md). Ideally, this would be the standard ranking to use in CS2.
 
 # Methodology
 This project consists of four phases:
@@ -23,25 +23,19 @@ This project consists of four phases:
 - Creating the Markdown tables linked above.
 
 ## Importing data
-To get initial access to the data, we can make use of three different ways:
-- The Valve rankings are publicly available via their Github (see credits below), and can easily be included by cloning
-their repository as part of the process.
-- The ESL rankings are publicly available on their website (see credits below), and are stored locally using 
-`BeautifulSoup`.
-- The HLTV rankings are pubicly available on their website (see credits below), and are stored locally using the 
-`hltv-data` Python package. Note that this only includes the top 30 of HLTV since rankings >30 are not available on a
-single webpage. Also note that for now I am using a local adjusted version of `hltv-data` until [this PR on Github](https://github.com/dchoruzy/hltv-data/pull/6) has been accepted.
-
-To make sure this project will not visit their web pages without reason, the loaded data is cached locally, in the 
-`aggregate_cs2_ranking/imported` folder. Then, when rerunning the scripts, the local version is used, unless these files
-are deleted or the import script is run with the `force=True` flag. Of course, this is occasionally needed to include
-the newer versions of the base rankings in this project.
+To get initial access to the data, I make use of the `cs-rankings` package. This package can pull data from HLTV, ESL
+and Valve rankings using either Selenium or directly from the respective git repository. More details can be found in
+the documentation of [cs-rankings](https://pypi.org/project/cs-rankings/).
+To make sure this project will not pull the data multiple times without reason, the loaded data is cached locally, in 
+the `aggregate_cs2_ranking/imported` folder. Then, when rerunning the scripts, the local version is used, unless these 
+files are deleted or the import script is run with the `force=True` flag. Of course, this is occasionally needed to
+include the newer versions of the base rankings in this project.
 
 ## Unifying data
 The data is merged together to end up with (for each team) their rank and points for each of the three base rankings. To
 do this, the following steps are taken:
 - Team names are not 100% consistent across rankings. To make them consistent, there is a mapping table 
-[teamname_mapping.csv](aggregate_cs2_ranking/teamname_mapping.csv) to convert various naming conventions into a single
+[teamname_mapping.csv](combined_cs2_rankings/teamname_mapping.csv) to convert various naming conventions into a single
 one. In case you see a mistake in there, please let me know!
 - In the Valve ranking, there are some team names included twice if there is no common 3-person core (for example, if
 there are only 2 people remaining in a rebuild). In that case, I only include the highest ranked core for now. In the
@@ -50,7 +44,7 @@ rankings.
 
 ## Alternative and combine rankings
 For this, there are three type of rankings, all visible in the 
-[aggregate_ranking.md](aggregate_cs2_ranking/aggregate_ranking.md):
+[all_combined_rankings.md](combined_cs2_rankings/all_combined_rankings.md):
 - Rank-based ranking
 - Point-based ranking
 - Combined ranking
@@ -98,7 +92,7 @@ number of points equal to 0 is included.
 ### Combined ranking
 Finally, all three types of rankings (the raw rankings from ESL, Valve and HLTV; the rank-based rankings; and the
 points-based rankings) are averaged to get a `mean_combined_rank`, which is then converted into a `total_rank` on which
-[aggregate_ranking.md](aggregate_cs2_ranking/aggregate_ranking.md) is sorted.
+[all_combined_rankings.md](combined_cs2_rankings/all_combined_rankings.md) is sorted.
 
 ## Creating the Markdown tables
 There is little to say on how these tables are created from the results above. In case you are interested in how to
@@ -133,8 +127,7 @@ Of course, credit is due to [ESL](https://pro.eslgaming.com/worldranking/csgo/ra
 [HLTV](https://www.hltv.org/ranking/teams/) and 
 [Valve](https://github.com/ValveSoftware/counter-strike_regional_standings/tree/main/live/2024) themselves to create 
 these rankings. For all three, a lot of thought and work has gone into these, and it is great that there are three 
-competitive rankings that capture different components of what makes a CS team good. Thanks!!
+competitive rankings that capture different components of what makes a Counterstrike team good. Thanks!!
 
-Next to that, credit to dchoruzy, the creator of the [hltv-data](https://github.com/dchoruzy/hltv-data) repository, 
-which was not only useful for getting programmatic access to the HLTV rankings but also acted as a starting point for my
-own ESL pull. Thank you!
+Next to that, credit to dchoruzy, the creator of the [hltv-data](https://github.com/dchoruzy/hltv-data) repository, which has acted as inspiration for 
+my own rankings-specific package [cs-rankings](https://pypi.org/project/cs-rankings/). Thank you!

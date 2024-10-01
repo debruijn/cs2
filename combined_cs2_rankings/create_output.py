@@ -15,7 +15,7 @@ def optimal_score(x):
 
 def create_output():
 
-    # Create aggregate ranking table, focused on the "best rank"
+    # Create all combined ranking table, focused on the "best rank"
     combined_results = pd.read_pickle('output/all_rankings.pkl')
     combined_results = combined_results.rename(columns={'aggregate_rank': 'total_rank'})
     combined_results['total_rank'] = combined_results['total_rank'].transform(int)
@@ -24,7 +24,7 @@ def create_output():
         combined_results[col] = combined_results[col].transform(lambda x: "" if np.isnan(x) else str(int(x)))
     combined_results['mean_combined_rank'] = combined_results['mean_combined_rank'].transform(lambda x: np.round(x, 2))
 
-    with open("aggregate_ranking.md", 'w') as out:
+    with open("all_combined_rankings.md", 'w') as out:
         out.write(combined_results.to_markdown())
 
     # Create optimal score table, focused on the "best score"

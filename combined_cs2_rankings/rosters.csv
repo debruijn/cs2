@@ -13,7 +13,7 @@ paiN,"['biguzera', 'kauez', 'lux', 'nqz', 'snow']",[]
 FURIA,"['chelo', 'fallen', 'kscerato', 'skullz', 'yuurih']",[]
 Virtus.pro,"['electronic', 'fame', 'fl1t', 'jame', 'n0rb3r7']",[]
 Astralis,"['cadian', 'device', 'jabbi', 'staehr', 'stavn']",[]
-SAW,"['roman', 'mutiris', 'story', 'ewjerkz']","[['mutiris', 'roman', 'story', 'ewjerkz', 'ag1l'], ['arrozdoce', 'ewjerkz', 'mutiris', 'roman', 'story']]"
+SAW,"['roman', 'mutiris', 'story', 'ewjerkz', 'ag1l']","[['roman', 'mutiris', 'story', 'ewjerkz'], ['mutiris', 'roman', 'story', 'ewjerkz', 'ag1l'], ['arrozdoce', 'ewjerkz', 'mutiris', 'roman', 'story']]"
 HEROIC,"['degster', 'kyxsan', 'nertz', 'sjuush', 'teses']",[]
 Falcons,"['snappi', 'dupreeh', 's1mple', 'magisk', 'maden']","[['dupreeh', 'maden', 'magisk', 'snappi', 'sunpayus']]"
 3DMAX,"['djoko', 'ex3rcice', 'graviti', 'lucky', 'maka']",[]
@@ -59,9 +59,9 @@ FlyQuest,"['alistair', 'dexter', 'ins', 'liazz', 'vexite']",[]
 Monte Gen,"['fnl', 'gizmy', 'leen', 'ryu', 'shield']",[]
 9INE,"['mantuu', 'misutaaa', 'raalz', 'refrezh', 's0und']",[]
 UNiTY,"['pechyn', 'blogg1s', 'levi', 'k1-fida', 'm1key']","[['blogg1s', 'k1-fida', 'levi', 'neofrag', 'pechyn'], ['blogg1s', 'k1-fida', 'levi', 'm1key', 'pechyn']]"
-OG,"['buzz', 'chr1zn', 'f1ku', 'modo', 'nexius']",[]
+OG,"['f1ku', 'nexius', 'buzz', 'modo', 'chr1zn']","[['f1ku', 'k1to', 'modo', 'nexius', 'thomas'], ['buzz', 'chr1zn', 'f1ku', 'modo', 'spooke'], ['buzz', 'chr1zn', 'f1ku', 'modo', 'nexius']]"
 Sharks,"['hoax', 'gafolo', 'koala', 'rdnzao', 'doc']","[['doc', 'drg', 'rdnzao', 'suplexn1', 'togs'], ['doc', 'gafolo', 'hoax', 'koala', 'rdnzao']]"
-Insilio,"['pipw', 'faydett', 'fpsss', 'sugar']","[['faydett', 'fpsss', 'kelien', 'pipw', 'sugar'], ['sugar', 'faydett', 'fpsss', 'pipw'], ['faydett', 'fpsss', 'pipw', 'polt', 'sugar']]"
+Insilio,"['sugar', 'faydett', 'fpsss', 'pipw', 'kelien']","[['pipw', 'faydett', 'fpsss', 'sugar'], ['faydett', 'fpsss', 'kelien', 'pipw', 'sugar'], ['sugar', 'faydett', 'fpsss', 'pipw'], ['faydett', 'fpsss', 'pipw', 'polt', 'sugar']]"
 NAVI Junior,"['cmtry', 'dem0n', 'dziugss', 'krabeni', 'makazze']",[]
 Spirit Academy,"['alkarenn', 'kyousuke', 'mokuj1n', 'robo', 'syph0']",[]
 Passion UA,"['fear', 'jambo', 's-chilla', 'jackasmo', 'zerrofix']","[['jambo', 'jackasmo\t', 'zerrofix', 's-chilla', 'fear'], ['fear', 'jackasmo', 'jambo', 's-chilla', 'zerrofix']]"
@@ -73,7 +73,7 @@ MOUZ NXT,"['burmylov', 'neityu', 'pr', 'tobiz', 'xelex']",[]
 ECLOT,"['kreaz', 'blytz', 'forsyy', 'nbqq', 'dytor']","[['blytz', 'dytor', 'forsyy', 'nbqq', 'realzen'], ['blytz', 'dytor', 'forsyy', 'kreaz', 'nbqq']]"
 KRÜ,"['atarax1a', 'deco', 'laser', 'reversive', 'righi']",[]
 TYLOO,"['jamyoung', 'starry', 'jee', 'mercury', 'moseyuh']","[['advent', 'jamyoung', 'kaze', 'mercury', 'zdr'], ['jamyoung', 'jee', 'mercury', 'moseyuh', 'starry']]"
-CPH Wolves,"['eraa', 'szejn', 'andu', 'tapewaare', 'magila']","[['eraa', 'fessor', 'sausol', 'szejn', 'tapewaare']]"
+CPH Wolves,"['andu', 'eraa', 'magila', 'szejn', 'tapewaare']","[['bøghmagic', 'fessor', 'sense', 'szejn', 'tapewaare'], ['eraa', 'szejn', 'andu', 'tapewaare', 'magila'], ['eraa', 'fessor', 'sausol', 'szejn', 'tapewaare']]"
 inSanitY,"['idk', 'shz', 'pesadelo', 'f4stzin', 'cass1n']","[['cass1n', 'delboni', 'f4stzin', 'idk', 'shz'], ['cass1n', 'f4stzin', 'idk', 'pesadelo', 'shz']]"
 Imperial fe,"['ana', 'kat', 'tory', 'twenty3', 'zaaz']",[]
 Solid,"['destiny', 'alle', 'drg', 'gbb', 'misfit']","[['alle', 'cso', 'gbb', 'lcm', 'xureba'], ['alle', 'destiny', 'drg', 'gbb', 'misfit']]"
@@ -91,12 +91,12 @@ Qiang,"['aaron', 'bibu', 'dgl', 'kory', 'porya']",[]
 Lynn Vision,"['afufu', 'emiliaqaq', 'flying', 'westmelon', 'z4kr']",[]
 Aurora Young Blud,"['bl1x1', 'bluewh1te', 'gr1ks', 'm1quse', 'vilby']",[]
 ARCRED,"['vert', 'dssj', 'get_jeka', 'synyx', '1nvisiblee']","[['dssj', 'get_jeka', 'synyx', 'shg', '1nvisiblee'], ['1nvisiblee', 'dssj', 'get_jeka', 'synyx', 'vert']]"
-BC.Game,"['lekr0', 'anarkez', 'cacanito', 'kwertzz', 'pr1metapz']","[['anarkez', 'cacanito', 'guardian', 'lekr0', 'pr1metapz']]"
+BC.Game,"['guardian', 'lekr0', 'cacanito', 'kwertzz', 'pr1metapz']","[['lekr0', 'anarkez', 'cacanito', 'kwertzz', 'pr1metapz'], ['anarkez', 'cacanito', 'guardian', 'lekr0', 'pr1metapz']]"
 Permitta,"['fr3nd', 'tomiko', 'maaryy', 'bnox', 'masked']","[['bnox', 'maaryy', 'markoś', 'masked', 'tomiko'], ['bnox', 'fr3nd', 'maaryy', 'masked', 'tomiko']]"
-ATOX,"['kabal', 'sk0r', 'yami', 'miq']","[['cool4st', 'dobu', 'kabal', 'miq', 'yami'], ['dobu', 'kabal', 'yami', 'miq'], ['dobu', 'flynn', 'kabal', 'miq', 'yami'], ['annihilation', 'dobu', 'kabal', 'miq', 'yami']]"
+ATOX,"['flynn', 'kabal', 'masti', 'miq', 'yami']","[['kabal', 'sk0r', 'yami', 'miq'], ['cool4st', 'dobu', 'kabal', 'miq', 'yami'], ['dobu', 'kabal', 'yami', 'miq'], ['dobu', 'flynn', 'kabal', 'miq', 'yami'], ['annihilation', 'dobu', 'kabal', 'miq', 'yami']]"
 Case,"['bsd', 'nyezin', 'ricioli', 'urban0', 'yepz']",[]
-FLUFFY AIMERS,"['jason', 'slump', 'nooz', 'brett', 'marke']","[['nooz', 'brett', 'ayy', 'jason', 'slump'], ['marke', 'nooz', 'brett', 'jason', 'slump'], ['ayy', 'brett', 'jason', 'nooz', 'slump']]"
-Apogee,"['polo', 'prism', 'qlocuu', 'swiz', 'virtuoso']",[]
+FLUFFY AIMERS,"['brett', 'jason', 'nooz', 'slump', 'wolffe']","[['jason', 'slump', 'nooz', 'brett', 'marke'], ['nooz', 'brett', 'ayy', 'jason', 'slump'], ['marke', 'nooz', 'brett', 'jason', 'slump'], ['ayy', 'brett', 'jason', 'nooz', 'slump']]"
+Apogee,"['prism', 'swiz', 'qlocuu', 'virtuoso']","[['polo', 'prism', 'qlocuu', 'swiz', 'virtuoso']]"
 RUBY,"['forkyz', 'kaide', 'mo0n', 'sowalio', 'tasman']",[]
 Akimbo,"['kmrn', 'n2o', 'obi', 'kralz ', 'laxiee']","[['kralz ', 'mike', 'n2o', 'obi', 'taggy'], ['kmrn', 'kralz ', 'laxiee', 'n2o', 'obi']]"
 Hype,"['history', 'leo_drk', 'mallby', 'redi', 'vinaabeast']","[['leo_drk', 'mallby', 'history', 'vinaabeast'], ['history', 'leo_drk', 'mallby', 'rainny', 'vinaabeast']]"
@@ -116,19 +116,19 @@ The Suspect,"['cerber', 'valon', 'bledard', 'hyperi1', 'caleyy']","[['cerber', '
 Bounty Hunters,"['shoowtime', 'bnc', 'kaiser', 'bruninho', 'reix']","[['bnc', 'kaiser', 'piriajr', 'reix', 'shoowtime']]"
 kONO,"['amster', 'byr9', 'kensizor', 'polbandana', 's4ltovsk1yy']",[]
 W7M,"['card', 'fokiu', 'jz', 'stormzyn', 't9rnay']",[]
-Rooster,"['chelleos', 'asap', 'tjp', 'danger', 'sliimey']","[['chelleos', 'asap', 'tjp', 'sliimey'], ['asap', 'chelleos', 'rackem', 'sliimey', 'tjp']]"
+Rooster,"['chelleos', 'asap', 'tjp', 'sliimey', 'rackem']","[['chelleos', 'asap', 'tjp', 'danger', 'sliimey'], ['chelleos', 'asap', 'tjp', 'sliimey'], ['asap', 'chelleos', 'rackem', 'sliimey', 'tjp']]"
 VP.Prodigy,"['b1st', 'dwushka', 'kusme', 'something', 'xdeniszera']",[]
 FLuffy Gangsters,"['djon8', 'h1ghness', 'solb', 'takanashi', 'yuramyata']",[]
-ex-Enterprise,"['sobol', 'demho', 'bajmi', 'ex1st']","[['demho', 'ex1st', 'mwlky', 'sk1tt', 'sobol']]"
+ex-Enterprise,"['sobol', 'bajmi', 'ex1st']","[['bajmi', 'demho', 'ex1st', 'mwlky', 'sobol'], ['sobol', 'demho', 'bajmi', 'ex1st'], ['demho', 'ex1st', 'mwlky', 'sk1tt', 'sobol']]"
 Fluxo Demons,"['annaex', 'goddess', 'josi', 'poppins', 'yungher']",[]
 dream catchers fe,"['elizabeth', 'f6tal', 'k175un4', 'sosya', 'wieenn']",[]
-Galorys,"['xureba', 'detr0it', 'ninjaz', 'tomate', 'delboni']","[['detr0ittj', 'ninjaz', 'xureba', 'tomate'], ['detr0it', 'ninjaz', 'xureba', 'delboni', 'tomate'], ['delboni', 'detr0ittj', 'ninjaz', 'xureba', 'tomate'], ['detr0ittj', 'happ', 'hoax', 'ninjaz', 'piriajr'], ['delboni', 'detr0ittj', 'ninjaz', 'tomate', 'xureba']]"
+Galorys,"['detr0it', 'ninjaz', 'xureba', 'tomate']","[['xureba', 'detr0it', 'ninjaz', 'tomate', 'delboni'], ['detr0ittj', 'ninjaz', 'xureba', 'tomate'], ['detr0it', 'ninjaz', 'xureba', 'delboni', 'tomate'], ['delboni', 'detr0ittj', 'ninjaz', 'xureba', 'tomate'], ['detr0ittj', 'happ', 'hoax', 'ninjaz', 'piriajr'], ['delboni', 'detr0ittj', 'ninjaz', 'tomate', 'xureba']]"
 Vikings KR,"['remix', 'zmb', 'realz1n', 'honda', 'lukiz']","[['lukiz', 'max', 'realz1n', 'remix', 'zmb'], ['honda', 'lukiz', 'realz1n', 'remix', 'zmb']]"
 Let Her Cook,"['hikomi', 'joanana', 'maneschijnx', 'meli', 'spike']",[]
 Verdant,"['diviiii', 'artist', 'extinct', 'girafffe', 'vacancy']","[['cryths', 'diviiii', 'extinct', 'girafffe', 'vacancy'], ['artist', 'diviiii', 'extinct', 'girafffe', 'vacancy']]"
 Space,"['x5g7v', 'chill', 'truniq', 'danistzz', 'h4san4tor']","[['x5g7v', 'truniq', 'danistzz', 'h4san4tor'], ['chill', 'danistzz', 'h4san4tor', 'truniq', 'x5g7v']]"
 Dusty Roots,"['1962', 'alexer', 'maxxkor', 'owensinhom', 'tom1jed']",[]
-Nexus,"['btn', 'xellow', 'ciocardau', 'ragga']","[['7kick', 'btn', 'ciocardau', 'ragga', 'xellow']]"
+Nexus,"['adron', 'btn', 'ciocardau', 'ragga', 'xellow']","[['btn', 'xellow', 'ciocardau', 'ragga'], ['7kick', 'btn', 'ciocardau', 'ragga', 'xellow']]"
 Illuminar,"['furlan', 'kadziu', 'phr', 'splawik', 'ultimate']","[['b1elany', 'furlan', 'kadziu', 'keis', 'm4tthi'], ['furlan', 'phr', 'b1elany', 'kadziu', 'spavaqu'], ['anerax', 'b1elany', 'phr', 'splawik', 'ultimate'], ['b1elany', 'furlan', 'kadziu', 'phr', 'spavaqu']]"
 NIP Impact,"['aim', 'nayomy', 'qiyarah', 'ramziin', 'vilga']",[]
 Lilmix,"['bq', 'dex', 'eraa', 'quix', 'shine']",[]
@@ -139,7 +139,7 @@ Gods Reign,"['bhavi', 'ph1nnn', 'rev3nnnn', 'f1redup', 'r2b2']","[['1nhuman', 'b
 Apeks,"['cacanito', 'jkaem', 'nawwk', 'sense', 'styko']",[]
 FlyQuest RED,"['bibiahn', 'emy', 'goosebreeder', 'kaoday', 'vanessa']",[]
 HSG fe,"['ann4', 'gfi', 'hazel', 'olga', 'xiaowu']",[]
-The Art of War,"['ban4na', 'neo', 'oath', 'terryyy', 'viridian']",[]
+The Art of War,"['viridian', 'ban4na', 'terryyy', 'neo', 'oath']","[['ban4na', 'neo_au', 'terryyy', 'viridiancity', 'oath'], ['ban4na', 'neo', 'oath', 'terryyy', 'viridian']]"
 Mythic,"['cooper', 'fl0m', 'freakazoid', 'hate', 'trucklover86']","[['freakazoid', 'fl0m', 'cooper', 'austin', 'trucklover86'], ['freakazoid', 'cooper-', 'fl0m', 'trucklover86', 'austin'], ['austin', 'cooper', 'fl0m', 'freakazoid', 'trucklover86']]"
 Meteor,"['dosikzz', 'for2na', 'resoluxe', 'rinn', 'wangj']",[]
 Patins da Ferrari,"['cso', 'cutzmeretz', 'leomonster', 'misfit', 'zede']","[['zede', 'cutzmeretz', 'perez'], ['cso', 'cutzmeretz', 'leomonster', 'mtgg', 'zede']]"
@@ -148,12 +148,12 @@ Limitless,"['cyrix', 'djf', 'sandman', 'seb', 'tender']","[['cyrix', 'seb', 'djf
 Grannys Knockers,"['slokkerr', 'bagyz', 'sidivo', 'streakn']","[['bagyz', 'magila', 'sidivo', 'slokkerr', 'streakn']]"
 MIBR fe,"['babs', 'dani', 'gabi', 'khizha', 'lexy']","[['babs', 'dani', 'gabi', 'khizha', 'regiane']]"
 Astralis Talent,"['ansg1', 'kir', 'krok', 'ssen', 'suma']",[]
-DRILLAS,"['amsalem', 'hadji', 'kvem', 'meztal', 'woro2k']",[]
+DRILLAS,"['hadji', 'sener1', 'woro2k', 'meztal', 'kvem']","[['amsalem', 'hadji', 'kvem', 'meztal', 'woro2k']]"
 Take Flyte,"['cbass', 'champ', 'grave', 'jchance', 'z0mb1e']",[]
 BIG EQUIPA,"['jennyr', 'juliano', 'leti', 'pauliiee', 'zana']",[]
 LAG,"['experative', 'nicx', 'rayxts', 'tr0jn', 'weeza']","[['based', 'experative', 'nicx', 'nyyx', 'ogwizard']]"
 TALON,"['addict', 'azr', 'hazr', 'mhl', 'nettik']",[]
-GR,"['7nation', 'mediocrity', 'runnin', 'salo_mux', 'weqt2']",[]
+GR,"['salo_mux', 'weqt2', 'mediocrity', '7nation', 'runnin']","[['7nation', 'mediocrity', 'overdue', 'salo_mux', 'weqt2'], ['7nation', 'mediocrity', 'runnin', 'salo_mux', 'weqt2']]"
 K27,"['xeedo', 'relaxxie', 'kashl1d', 'aliot']","[['aliot', 'kashl1d', 'relaxxie', 'twizell', 'xeedo']]"
 Players,"['dzt', 'dok', 'mithputtini', 'spinnie']","[['dok', 'dzt', 'lich', 'mithputtini', 'spinnie']]"
 Final Form,"['cajun', 'coolcoms', 'drop', 'fxre', 'ynghunter']",[]
@@ -168,7 +168,7 @@ TNL,"['onic', 'zogen', 'yukitoro', 'st0m4k', 'cairne']","[['cairne', 'ganginho',
 DASH,"['psycho', 'nifee', 'flierax', 'dawy']","[['cairne', 'dawy', 'flierax', 'nifee', 'psycho']]"
 LEON,"['facecrack', 'yngsamurai', 'raijin', 'ray5ive', 'w1sely']","[['eightz999', 'facecrack', 'jiaym', 'raijin', 'w1sely']]"
 InControl,"['jsfeltner', 'andrew', 'mason', 'dylan', 'tyra']","[['jsfeltner', 'mason', 'dylan', 'tyra'], ['aj2k', 'fiend', 'jsfeltner', 'mason', 'tyra']]"
-KZG,"['dpr', 'estate', 'hassie', 'samuukxs', 'zuko']","[['kzxl', 'samuukxs', 'hassie', 'dpr'], ['zuko', 'hassie', 'samuukxs', 'estate', 'dpr'], ['dpr', 'estate', 'hassie', 'mingovi', 'samuukxs']]"
+KZG,"['estate (kzxl)', 'samuukxs', 'hassie']","[['hassie', 'samuukxs', 'estate', 'dpr'], ['dpr', 'estate', 'hassie', 'samuukxs', 'zuko'], ['kzxl', 'samuukxs', 'hassie', 'dpr'], ['zuko', 'hassie', 'samuukxs', 'estate', 'dpr'], ['dpr', 'estate', 'hassie', 'mingovi', 'samuukxs']]"
 WOPA,"['vster', 'pr1me', 'gnøffe', 'leakz', 'sl1m3']","[['gnøffe', 'leakz', 'sl1m3', 'vster', 'zeden']]"
 JANO,"['allu', 'aerial', 'xseven', 'juho', 'henu']","[['allu', 'cliqq', 'jerppa', 'sm1llee', 'villeboe']]"
 777,"['hagmeister', 'qzr', 'sly', 'viktha', 'wenba']",[]
@@ -184,7 +184,7 @@ Portugal,"['ag1l', 'aragornn', 'icarus', 'nopeej', 'rafaxf']",[]
 Heimo,"['arvid', 'oopee', 'welho', 'jape']","[['arvid', 'jape', 'oopee', 'spargo', 'welho'], ['arvid', 'jape', 'oopee', 'welho', 'ykis']]"
 Crescent fe,"['akiyanora', 'ayaka', 'meo', 'mileyyy', 'unknxwn']","[['akiyanora', 'amore', 'meo', 'mileyyy', 'unknxwn']]"
 QUAZAR,"['gehji', 'muk0s', 'n4mb3r5', 'tommy', 'whisper']",[]
-CatEvil,"['lan', 'biuckmt', 'tanxiaomei', 'roninbaby', 'bza']","[['biuckmt', 'bza', 'roninbaby', 'rw', 'tanxiaomei']]"
+CatEvil,"['biuckmt', 'tanxiaomei', 'roninbaby', 'bza']","[['lan', 'biuckmt', 'tanxiaomei', 'roninbaby', 'bza'], ['biuckmt', 'bza', 'roninbaby', 'rw', 'tanxiaomei']]"
 Anonymo,"['darchevile', 'enzo', 'ex1st', 'morelz', 'nami']","[['chudy', 'darchevile', 'enzo', 'morelz', 'nami'], ['enzo', 'darchevile', 'chudy', 'nami', 'yvro'], ['chudy', 'darchevile', 'melavi', 'nami', 'yvro']]"
 Vantage,"['drox', 'mingovi', 'supar', 'jynx', 'alecc']","[['alecc', 'drox', 'jynx', 'n1ghtraid', 'nauh']]"
 INFINITE,"['chanky', 'd1maje', 'mhn1', 'starplajerz', 'zewts']",[]
@@ -194,7 +194,7 @@ HAVU,"['uli', 'jelo', 'puuha']","[['airax', 'jelo', 'ottond', 'puuha', 'uli']]"
 ENCE Athena,"['aida', 'emmsan', 'milo', 'waldee', 'xia']",[]
 Homyno,"['binox', 'gabie', 'j0lz', 'melio', 'tenskee']",[]
 WW,"['aunkere', 'ct0m', 'kelien', 'strogo', 'tried']","[['aunkere', 'strogo', 'ct0m', 'tried'], ['aunkere', 'ct0m', 'jerry', 'strogo', 'tried']]"
-GenOne,"['devoduvek', 'drac', 'kursy', 'unshaark', 'brooxsy']","[['brooxsy', 'devoduvek', 'drac', 'jackz', 'krl']]"
+GenOne,"['devoduvek', 'drac', 'kursy', 'brooxsy']","[['devoduvek', 'drac', 'kursy', 'unshaark', 'brooxsy'], ['brooxsy', 'devoduvek', 'drac', 'jackz', 'krl']]"
 Bromo,"['fiourn', 'miami', 'rage', 'spine', 'zy88']",[]
 Nouns fe,"['ashe', 'jesscas', 'katalyyst', 'lunari', 'raynee']",[]
 GL Academy,"['adam9130', 'goody', 'darber', 'rud', 'tree60']","[['darber', 'goody', 'leaf', 'rud', 'tree60']]"
@@ -205,7 +205,7 @@ MANTRA,"['cheeseball', 'cookie', 'reapz', 'rekonz', 'winnieeeee']",[]
 MIGHT,"['djay', 'jonji', 'snakes', 'louie', 'jam']","[['djay', 'fr3nk1e', 'nifty', 'scar', 'snakes']]"
 Secret,"['anarkez', 'juve', 'kind0', 'nopeej', 'tauson']",[]
 Steel Helmet,"['captainmo', 'dd', 'xiaosage', 'ae', '18ym']","[['mo', 'dd', 'xiaosage', 'ae', '18ym'], ['18ym', 'ae', 'captainmo', 'dd', 'xiaosage']]"
-JiJieHao,"['m1n1', '0samas', 'dennyslaw']","[['m1n1', '0samas', 'dennyslaw', 'issaa'], ['dennyslaw', 'm1n1', '0samas']]"
+JiJieHao,"['issaa', 'aaron', 'dennyslaw', 'm1n1', 'bibu']","[['m1n1', '0samas', 'dennyslaw'], ['m1n1', '0samas', 'dennyslaw', 'issaa'], ['dennyslaw', 'm1n1', '0samas']]"
 Betera,"['el1an', 'masval', 'owner', 'sh1nejezzz', 'supra']","[['el1an', 'masval', 'owner', 'sh1nejezzz']]"
 IHC,"['roux', 'ariucle', 'efire', 'accuracytg', 'zesta']",[]
 Teamwork,"['tears', '0z', 'ar1s', 'geq1an', 'doomer']",[]
@@ -227,7 +227,7 @@ Bravado,"['march', 'wilj', 'doru', 'triton']",[]
 Revenge,"['ad0rfin', 'imygdx', 'nurssss', 'nesh', 'scarface']",[]
 Bad News Chickens,"['leomonster', 'desh', 'short', 'alisson', 'skr']",[]
 Blaze Warriors,"['pms', 'baby4', 'melu', 'tad', 'ryu']",[]
-SENSEI,"['cutzmeretz', 'lcm', 'perez', 'cso', 'jz']",[]
+SENSEI,"['cutzmeretz', 'lub', 'lcm', 'perez', 'cso']","[['cutzmeretz', 'lcm', 'perez', 'cso', 'jz']]"
 XNL,"['fries', 'zhangjingxuan', 'tdd', '21cc', 'carua']",[]
 Marca Registrada,"['kezz', 'b1', 'amc', 'majesticzz', 'jardani']",[]
 SHPL,"['s1kura', 'narone', 'madness', 'xan', 'nuko']",[]
@@ -270,7 +270,7 @@ Sashi Esport,"['kwezz', 'lucky', 'iceberg', 'cabbi', 'mistr']",[]
 Amkal Esports,"['forester', 'krad', 'travis', 'topo-', 'nota']",[]
 Aurora Gaming,"['norwi', 'kensi', 'lack1', 'deko', 'clax']",[]
 Lynn Vision Gaming,"['xg', 'mitsuha', 'emilia', 'flying', 'afufu']",[]
-ATOX Esports,"['kabal', 'miq', 'dobu', 'yami']","[['annihilation', 'kabal', 'miq', 'dobu', 'yami']]"
+ATOX Esports,"['kabal', 'miq', 'yami']","[['kabal', 'miq', 'dobu', 'yami'], ['annihilation', 'kabal', 'miq', 'dobu', 'yami']]"
 9Pandas,"['r3salt', 'glowiing', 'd1ledez', 'idisbalance', 'shalfey']",[]
 Movistar KOI,"['just', 'stadodo', 'dav1g', 'adams', 'mopoz']",[]
 SINNERS Esports,"['majky', 'shock', 'beastik', 'oskar', 'moriisko']",[]
@@ -281,15 +281,15 @@ WDNMD,"['lan', 'qz', 'attacker', 'bottle', 'ayeon']",[]
 Endpoint CeX,"['mightymax', 'surreal', 'azuwu-', 'cej0t', 'cruc1al']",[]
 BLEED Esports,"['jkaem', 'cypher', 'vldn']",[]
 KRÜ Esports,"['righii', 'atarax1a', 'laser', 'reversive', 'decov9jse']",[]
-inSanitY Sports,"['idk', 'f4stzin', 'cass1n', 'shz', 'pesadelo']",[]
+inSanitY Sports,"['idk', 'f4stzin', 'cass1n', 'shz', 'delboni']","[['idk', 'f4stzin', 'cass1n', 'shz', 'pesadelo']]"
 Bounty Hunters Esports,"['kaiser', 'shoowtime', 'reix', 'bnc', 'bruninho']",[]
-ex-Pera Esports,"['dgl', 'aaron', 'bibu', 'porya', 'kory']",[]
+ex-Pera Esports,"['dgl', 'porya', 'kory']","[['dgl', 'aaron', 'bibu', 'porya', 'kory']]"
 ex-Perseverance Gaming,"['shutout', 'mds_us', 'gabe', 'cojomo']",[]
 Gen.G Esports,"['heartz', 'screamy', 'miracle\t', 'erye', 'resay']",[]
 Permitta Esports,"['tomiko', 'maaryy', 'masked', 'bnox']",[]
 RG-QingQiu Esports,"['gas', 'zzzzzzzznan', 'purely', 'marek', 'qqgod']",[]
 Rebels Gaming,"['olimp', 'casey', 'flayy', 'innocent', 'kisserek']",[]
-Kinship,"['cxzi', 'vein', 'k4mr0', 'den1ed', 'evan']",[]
+Kinship,"['vein', 'k4mr0', 'den1ed', 'evan']","[['cxzi', 'vein', 'k4mr0', 'den1ed', 'evan']]"
 CYBERSHOKE Esports,"['fenomen', 'lov1kus', 'notineki', 'levantino', 'sstinix']",[]
 Intense Game,"['diozera', 'ckzao', 'freq', 'keiz']","[['diozera', 'mxa', 'ckzao', 'freq', 'keiz']]"
 LAG Gaming,"['experative', 'nicx', 'weeza', 'rayxts', 'tr0jn']",[]
@@ -298,7 +298,7 @@ Team Solid,"['drg', 'alle', 'gbb', 'destiny', 'misfit']","[['drg', 'lcmm', 'alle
 Nemiga Gaming,"['khan', 'riskyb0b', 'xant3r', '1eer', 'zweih']","[['khan', 'riskyb0b', 'xant3r', '1eer']]"
 Galaxy Ship,"['mrx', 'dimsum', 'rw', 'monarch8', 'zyhan']",[]
 Change The Game,"['laikexu', 'lyrics3', '957', 'linggod', 'crisis']",[]
-ex-ENTERPRISE esports,"['demho', 'bajmi', 'ex1st', 'toao']","[['fr3nd', 'demho', 'bajmi', 'ex1st', 'toao']]"
+ex-ENTERPRISE esports,"['bajmi', 'ex1st', 'toao']","[['demho', 'bajmi', 'ex1st', 'toao'], ['fr3nd', 'demho', 'bajmi', 'ex1st', 'toao']]"
 Hype E-Sports,"['history', 'leo_drunky', 'mallby', 'vinaabeast']","[['history', 'rainny', 'leo_drunky', 'mallby', 'vinaabeast']]"
 Illuminar Gaming,"['b1elany', 'furlan', 'phr', 'spavaq', 'kadziu']",[]
 Team Space,"['x5g7v', 'truniq', 'danistzz', 'h4san4tor']",[]
@@ -321,14 +321,24 @@ Fire Flux,"['scrunk', 'paz', 's3nsey', 'banjo', 'soulfly']",[]
 Amped Red,"['sethp', 'kennyt', 'bankey21', 'daniels', 'sc0rch']",[]
 Into The Breach,"['smooya', 'keoz', 'juanflatroo', 'sinnopsyy', 'redstar']",[]
 Honvéd,"['aaron', 'bodito', 'fleav', 'kamion', 'kory']",[]
-UNPAID,"['jkaem', 'nexa', 'cypher', 'h4rn', 'vldn']",[]
+UNPAID,"['jkaem', 'nexa', 'cypher', 'vldn']","[['jkaem', 'nexa', 'cypher', 'h4rn', 'vldn']]"
 Daystar,"['behindx', 'viggo', 'bekker', 'stesso', 'speedie']",[]
-Insomnia,"['pendzelek', 'snx', 'anerax', 'hotd0g ']",[]
+Insomnia,"['pendzelek', 'snx', 'anerax', 'hotd0g ', 'bambosh']","[['pendzelek', 'snx', 'anerax', 'hotd0g ']]"
 RAGE,"['r3lifwow', 'ner', 'elaydzha', 'fatestyoshi', 'ssu1tan']",[]
 Clutch,"['tsogoo', 'hasteka', 'izr', 'clouden', 'origloniko']",[]
 Mission Possible,"['b0rup', 'birdfromsky', 'vegi', 'm4tthi', 'licale']",[]
-500 Rush,"['grashog', 'zannn', 'next1me', 'nestee']",[]
+500 Rush,"['grashog', 'zannn', 'next1me', 'nestee', 'aimy']","[['grashog', 'zannn', 'next1me', 'nestee']]"
 GameAgents,"['wangj', 'rinn', 'dosikzz', 'resoluxe', 'for2na']",[]
 ShindeN,"['bk1', 'abizz', 'relentless', 'roy', 'ivz']",[]
 Team Spirit Academy,"['robo', 'mokuj1n', 'alkarenn', 'kyousuke', 'syph0']",[]
 FAVBET Team,"['j3kie', 't3ns1on', 'bondik', 'smash', 'marix']",[]
+SGGT,"['lame', 'haski4', 'zingy', 'sange', 'deffen']",[]
+INFURITY,"['sirius', 'kk', 'nolv1n', 'wallen', 'murb']",[]
+The Huns,"['nin9', 'bart4k', 'wonderzce', 'cobra']",[]
+HyperSpirit,"['geohype', 'swiiffter', 'kritik', 'welnic', 'awks']",[]
+Metizport X,"['zame', 'straxy', 'kronkzz', 'zapr', 'macke']",[]
+Viperio,"['swicher', 'shyyne', 'skrimo', 'zodi', 'dezt']",[]
+Nordix,"['berzerk', 'artstyle', 'artysan']",[]
+The QUBE,"['rate', 'tugu', 'sonqmad', 'paranormal', 'solooos']",[]
+JANO Esports,"['henu', 'allu', 'aerial', 'xseven', 'juho']",[]
+DXA Esports,"['helix_au', 'prakm', 'kiyo', 'lucas']",[]

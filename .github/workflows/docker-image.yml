@@ -1,17 +1,30 @@
 name: Docker Image CI
 
-on:
-  push:
-    branches:
-      - "main"
-      - "create_image"
-    paths:
-      - "Dockerfile"
-
 jobs:
   build:
+    on:
+      push:
+        branches:
+          - "create_image"
+        paths:
+          - "Dockerfile"
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag cs_rankings_image
+
+  on:
+    push:
+      branches:
+        - "main"
+      paths:
+        - "Dockerfile"
+  build_publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run:
+      - docker build . --file Dockerfile --tag ghcr.io/debruijn/cs_rankings_image
+      - docker push ghcr.io/debruijn/cs_rankings_image:latest

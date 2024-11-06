@@ -4,6 +4,11 @@ on:
   push:
     paths:
       - "Dockerfile"
+      - ".github/workflows/docker-image.yml"
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build:
@@ -17,8 +22,20 @@ jobs:
   build_publish:
     if: github.ref_name == 'main'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
     steps:
     - uses: actions/checkout@v4
+      name: Checkout repository
+    - name: Log in to the Container registry
+      uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
+      with:
+        registry: ${{ env.REGISTRY }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build the Docker image
       run: |
         docker build . --file Dockerfile --tag ghcr.io/debruijn/cs_rankings_image

@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    if: github.ref == 'create_image'
+    if: github.ref_name == 'create_image'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -18,7 +18,7 @@ jobs:
       run: docker build . --file Dockerfile --tag cs_rankings_image
 
   build_publish:
-    if: github.ref == 'main'
+    if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4

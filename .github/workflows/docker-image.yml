@@ -14,13 +14,13 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag cs_rankings_image
 
-  on:
-    push:
-      branches:
-        - "main"
-      paths:
-        - "Dockerfile"
   build_publish:
+    on:
+      push:
+        branches:
+          - "main"
+        paths:
+          - "Dockerfile"
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4

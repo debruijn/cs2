@@ -87,32 +87,27 @@ def run_unification():
     esl = esl.rename(columns={'position': 'rank', 'name': 'teamname'})
     valve = valve.rename(columns={'position': 'rank', 'name': 'teamname'})
 
-    # TODO: add in future a check on new teamnames - potentially reusing old team IDs or cores for automatically mapping
-
-    # Design:
-    # - Update teams with players and check if >=3 out of 5 are same
-    # - If you can't find them, check other teams to see that overlap
-    # - Otherwise, add new row with name repeated for mapping
-    # if members are different -> put old team to an archive csv or yaml or something - let's see
-
+    # Load in teamname_mapping, rosters, and player_mapping from earlier runs
     teamname_mapping = pd.read_csv('teamname_mapping.csv').drop_duplicates()
     teamname_mapping = teamname_mapping.set_index('teamname')
-
-
-    # TODO: later: remove old rosters
-    # TODO: add tests for update_teamnames_rosters
-
     rosters = pd.read_csv('rosters.csv')
     rosters = rosters.set_index('teamname')
     player_mapping = pd.read_csv('player_mapping.csv').set_index('map_from')
 
+    # Use the ranking dfs to update teamname_mapping and rosters with potential new teams or roster changes
     teamname_mapping, rosters = update_teamnames_rosters(valve, teamname_mapping, rosters, player_mapping)
     teamname_mapping, rosters = update_teamnames_rosters(hltv, teamname_mapping, rosters, player_mapping)
     teamname_mapping, rosters = update_teamnames_rosters(esl, teamname_mapping, rosters, player_mapping)
 
+    # Clean old teams/duplicate rosters and sort by teamname for easy comparison
+    teamname_mapping = clean_teamname_mapping(teamname_mapping)
+    rosters = clean_rosters(rosters, teamname_mapping)
+
+    # Write out teamname_mapping and rosters -> check in PR if new teams are just renaming old ones
     teamname_mapping.to_csv('teamname_mapping.csv')
     rosters.to_csv('rosters.csv')
 
+    # Apply renaming of teams to each ranking
     hltv['teamname'] = hltv['teamname'].apply(lambda x: teamname_mapping.loc[x].values[0])
     esl['teamname'] = esl['teamname'].apply(lambda x: teamname_mapping.loc[x].values[0]
                                                     if x in teamname_mapping.index else x)

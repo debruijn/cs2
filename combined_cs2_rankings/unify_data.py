@@ -70,8 +70,20 @@ def update_teamnames_rosters(df: pd.DataFrame, teamname_mapping: pd.DataFrame, r
 
 
 def clean_rosters(rosters_df, teamname_mapping):
-    # Clean: remove duplicate old_rosters, remove old_rosters that are the current roster, remove outdated teamnames
-    # Sort by index (teamname)
+    rosters_df = rosters_df.filter(items=teamname_mapping.mapped_name.values, axis=0)  # Only keep mapped_name rosters
+
+    for row in rosters_df.iterrows():  # Remove old_rosters that are current roster, or duplicate old_rosters
+        non_dup_old_rosters = []
+        curr_roster = set(eval(row[1].curr_roster))
+        for old_roster in eval(row[1].old_rosters):
+            old_roster = set(sorted(old_roster))
+            if not old_roster == curr_roster and not list(old_roster) in non_dup_old_rosters:
+                non_dup_old_rosters.append(list(old_roster))
+        rosters_df.loc[row[0], 'old_rosters'] = str(non_dup_old_rosters)
+
+    # Sort by index (teamname, lowercase)
+    rosters_df = rosters_df.sort_index(key=lambda x: x.str.lower())
+    rosters_df.index.name = 'teamname'
     return rosters_df
 
 def clean_teamname_mapping(teamname_df, clean=False):

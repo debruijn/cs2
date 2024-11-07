@@ -26,6 +26,61 @@ def copy_to_date_folder(force=False):
          for x in ['on_rank.pkl', 'on_team.pkl']]
 
 
+def update_teamnames_rosters(df: pd.DataFrame, teamname_mapping: pd.DataFrame, rosters: pd.DataFrame,
+                             player_mapping: pd.DataFrame):
+    """
+    For all teams:
+    - check if they are in their teamname_mapping
+      - Yes: compare roster with roster(s) in rosters.csv; if different, update.
+      - No: compare roster with all rosters for overlap for renaming
+          - Yes: rename curr teamname to new one + add new teamname + add roster to rosters.csv
+          - No: new teamname only + add to rosters.csv
+    Return: teamname_mapping and rosters (no application of mapping since needs to be consistent)
+    """
+    for row in df.iterrows():
+        # Extract info of team (name and roster)
+        this_name = row[1].teamname
+        this_roster = [x.lower() for x in row[1].players]
+        this_roster = [player_mapping.loc[x, 'map_to'] if x in player_mapping.index else x for x in this_roster]
+
+        if this_name in teamname_mapping.index.values:  # Teamname is already included
+            if this_name not in rosters.index.values:
+                rosters.loc[this_name] = {'curr_roster': this_roster, 'old_rosters': []}
+            elif set(this_roster) != set(eval(str(rosters.loc[this_name]['curr_roster']))):
+                # If this_roster != curr_roster, put curr_roster to old roster list
+                if this_roster not in eval(str((rosters.loc[this_name]['old_rosters']))):
+                    rosters.loc[this_name, 'old_rosters'] = str([eval(str(rosters.loc[this_name]['curr_roster']))] +
+                                                         eval(str(rosters.loc[this_name]['old_rosters'])))
+                    rosters.loc[this_name, 'curr_roster'] = str(this_roster)
+        else:  # New teamname
+            best_match = 0
+            matched_team = None
+            for roster in rosters.iterrows():
+                if len(set(roster[1].curr_roster).intersection(set(this_roster))) >= 3:
+                    if len(set(roster[1].curr_roster).intersection(set(this_roster))) > best_match:
+                        best_match = len(set(roster[1].curr_roster).intersection(set(this_roster)))
+                        matched_team = roster[1].teamname
+            if matched_team:
+                print(f'{this_name} matched to {matched_team}')
+            teamname_mapping.loc[this_name] = {'mapped_name': this_name}
+            teamname_mapping.loc[matched_team] = {'mapped_name': this_name}
+            rosters.loc[this_name] = {'curr_roster': this_roster, 'old_rosters': []}
+
+    return teamname_mapping, rosters
+
+
+def clean_rosters(rosters_df, teamname_mapping):
+    # Clean: remove duplicate old_rosters, remove old_rosters that are the current roster, remove outdated teamnames
+    # Sort by index (teamname)
+    return rosters_df
+
+def clean_teamname_mapping(teamname_df, clean=False):
+    # Clean: remove unused teams -> either immediately, or rework to keep track of last time team in ranking
+    # Sort by teamname
+
+    return teamname_df
+
+
 def run_unification():
     hltv, esl, valve = get_raw_data()
     hltv = hltv.rename(columns={'position': 'rank', 'name': 'teamname'})
@@ -43,13 +98,6 @@ def run_unification():
     teamname_mapping = pd.read_csv('teamname_mapping.csv').drop_duplicates()
     teamname_mapping = teamname_mapping.set_index('teamname')
 
-    # For all teams:
-    # - check if they are in their teamname_mapping
-    #   - Yes: compare roster with roster(s) in rosters.csv; if different, update.
-    #   - No: compare roster with all rosters for overlap for renaming
-    #       - Yes: rename curr teamname to new one + add new teamname + add roster to rosters.csv
-    #       - No: new teamname only + add to rosters.csv
-    # Return: teamname_mapping and rosters (no application of mapping since needs to be consistent)
 
     # TODO: later: remove old rosters
     # TODO: add tests for update_teamnames_rosters
@@ -58,38 +106,9 @@ def run_unification():
     rosters = rosters.set_index('teamname')
     player_mapping = pd.read_csv('player_mapping.csv').set_index('map_from')
 
-
-    def update_teamnames_rosters(df: pd.DataFrame, teamname_mapping: pd.DataFrame, rosters: pd.DataFrame):
-        for row in df.iterrows():
-            this_name = row[1].teamname
-            this_roster = [x.lower() for x in row[1].players]
-            this_roster = [player_mapping.loc[x, 'map_to'] if x in player_mapping.index else x for x in this_roster]
-            if this_name in teamname_mapping.index.values:
-                if this_name not in rosters.index.values:
-                    rosters.loc[this_name] = {'curr_roster': this_roster, 'old_rosters': []}
-                elif set(this_roster) != set(eval(str(rosters.loc[this_name]['curr_roster']))):
-                    if this_roster not in eval(str((rosters.loc[this_name]['old_rosters']))):
-                        rosters.loc[this_name, 'old_rosters'] = str([eval(str(rosters.loc[this_name]['curr_roster']))] +
-                                                             eval(str(rosters.loc[this_name]['old_rosters'])))
-                        rosters.loc[this_name, 'curr_roster'] = str(this_roster)
-            else:
-                best_match = 0
-                matched_team = None
-                for roster in rosters.iterrows():
-                    if len(set(roster[1].curr_roster).intersection(set(this_roster))) >= 3:
-                        if len(set(roster[1].curr_roster).intersection(set(this_roster))) > best_match:
-                            best_match = len(set(roster[1].curr_roster).intersection(set(this_roster)))
-                            matched_team = roster[1].teamname
-                if matched_team:
-                    print(teamname_mapping[matched_team])
-                teamname_mapping.loc[this_name] = {'mapped_name': this_name}
-                rosters.loc[this_name] = {'curr_roster': this_roster, 'old_rosters': []}
-
-        return teamname_mapping, rosters
-
-    teamname_mapping, rosters = update_teamnames_rosters(valve, teamname_mapping, rosters)
-    teamname_mapping, rosters = update_teamnames_rosters(hltv, teamname_mapping, rosters)
-    teamname_mapping, rosters = update_teamnames_rosters(esl, teamname_mapping, rosters)
+    teamname_mapping, rosters = update_teamnames_rosters(valve, teamname_mapping, rosters, player_mapping)
+    teamname_mapping, rosters = update_teamnames_rosters(hltv, teamname_mapping, rosters, player_mapping)
+    teamname_mapping, rosters = update_teamnames_rosters(esl, teamname_mapping, rosters, player_mapping)
 
     teamname_mapping.to_csv('teamname_mapping.csv')
     rosters.to_csv('rosters.csv')

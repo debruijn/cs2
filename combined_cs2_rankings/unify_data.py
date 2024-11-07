@@ -86,10 +86,25 @@ def clean_rosters(rosters_df, teamname_mapping):
     rosters_df.index.name = 'teamname'
     return rosters_df
 
+
+def sort_func(name_str):
+    name_str = name_str.lower()
+    if name_str.startswith('the '):
+        name_str = name_str[4:]
+    if name_str.startswith('team '):
+        name_str = name_str[5:]
+    if name_str.startswith('ex-'):
+        name_str = name_str[3:]
+    return name_str
+
+
 def clean_teamname_mapping(teamname_df, clean=False):
     # Clean: remove unused teams -> either immediately, or rework to keep track of last time team in ranking
-    # Sort by teamname
+    if clean:
+        pass  # Delay until #7
 
+    # Sort by index (teamname, lowercase, ignore the/team/ex) -> easily recognized different namings across rankings
+    teamname_df = teamname_df.reindex(sorted(teamname_df.index, key=lambda x: sort_func(x)))
     return teamname_df
 
 

@@ -62,8 +62,8 @@ def update_teamnames_rosters(df: pd.DataFrame, teamname_mapping: pd.DataFrame, r
                         matched_team = roster[1].teamname
             if matched_team:
                 print(f'{this_name} matched to {matched_team}')
+                teamname_mapping.loc[matched_team] = {'mapped_name': this_name}
             teamname_mapping.loc[this_name] = {'mapped_name': this_name}
-            teamname_mapping.loc[matched_team] = {'mapped_name': this_name}
             rosters.loc[this_name] = {'curr_roster': this_roster, 'old_rosters': []}
 
     return teamname_mapping, rosters
@@ -74,8 +74,8 @@ def clean_rosters(rosters_df, teamname_mapping):
 
     for row in rosters_df.iterrows():  # Remove old_rosters that are current roster, or duplicate old_rosters
         non_dup_old_rosters = []
-        curr_roster = set(eval(row[1].curr_roster))
-        for old_roster in eval(row[1].old_rosters):
+        curr_roster = set(eval(str(row[1].curr_roster)))
+        for old_roster in eval(str(row[1].old_rosters)):
             old_roster = set(sorted(old_roster))
             if not old_roster == curr_roster and not list(old_roster) in non_dup_old_rosters:
                 non_dup_old_rosters.append(list(old_roster))

@@ -59,7 +59,7 @@ def update_teamnames_rosters(df: pd.DataFrame, teamname_mapping: pd.DataFrame, r
                 if len(set(roster[1].curr_roster).intersection(set(this_roster))) >= 3:
                     if len(set(roster[1].curr_roster).intersection(set(this_roster))) > best_match:
                         best_match = len(set(roster[1].curr_roster).intersection(set(this_roster)))
-                        matched_team = roster[1].teamname
+                        matched_team = roster[1].teamname if 'teamname' in roster[1] else roster[0]
             if matched_team:
                 print(f'{this_name} matched to {matched_team}')
                 teamname_mapping.loc[matched_team] = {'mapped_name': this_name}

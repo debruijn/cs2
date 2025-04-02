@@ -2,7 +2,7 @@ import os
 import shutil
 from datetime import date
 import pandas as pd
-from cs_rankings import HLTVRankings, ESLRankings, ValveRankings
+from cs_rankings import HLTVRankings, ESLRankings, ValveLiveRankings
 
 
 def filefolder_exists(filename, dir=None):
@@ -22,13 +22,13 @@ def copy_to_date_folder(force=False):
     if force or not filefolder_exists(f'imported/{date_string}'):
         os.makedirs(f'imported/{date_string}', exist_ok=True)
         [shutil.copy(f'imported/{x}', f'imported/{date_string}/{x}')
-         for x in ['hltv_raw.pkl', 'esl_raw.pkl', 'valve_raw.pkl']]
+         for x in ['hltv_raw.pkl', 'esl_raw.pkl', 'valve_live_raw.pkl']]
 
 
 def import_data(force=False):
     import_ranking(HLTVRankings, 'hltv', force)
     import_ranking(ESLRankings, 'esl', force)
-    import_ranking(ValveRankings, 'valve', force, assume_git=True, keep_repository=True)
+    import_ranking(ValveLiveRankings, 'valve_live', force)
     copy_to_date_folder(force)
 
 

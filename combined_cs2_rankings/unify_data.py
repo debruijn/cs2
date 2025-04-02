@@ -11,7 +11,7 @@ def get_raw_data():
     path = 'imported/'
     hltv = pd.read_pickle(path + 'hltv_raw.pkl')
     esl = pd.read_pickle(path + 'esl_raw.pkl')
-    valve = pd.read_pickle(path + 'valve_raw.pkl')
+    valve = pd.read_pickle(path + 'valve_live_raw.pkl')
 
     # Filter out low scoring teams in HLTV for now
     hltv = hltv.loc[hltv.points > 1].copy()

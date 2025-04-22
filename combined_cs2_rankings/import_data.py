@@ -27,7 +27,7 @@ def copy_to_date_folder(force=False):
 
 def import_data(force=False):
     import_ranking(HLTVRankings, 'hltv', force)
-    import_ranking(ESLRankings, 'esl', force)
+    import_ranking(ESLRankings, 'esl', False)
     import_ranking(ValveLiveRankings, 'valve_live', force)
     copy_to_date_folder(force)
 

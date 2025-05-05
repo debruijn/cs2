@@ -17,19 +17,24 @@ def import_ranking(rankings_class, rankings_string, force=False, **kwargs):
         pd.to_pickle(ranking, 'imported/' + rankings_string + '_raw.pkl')
 
 
-def copy_to_date_folder(force=False):
+def copy_to_date_folder(force=False, incl_esl=False):
     date_string = str(date.today()).replace('-', '')
     if force or not filefolder_exists(f'imported/{date_string}'):
         os.makedirs(f'imported/{date_string}', exist_ok=True)
-        [shutil.copy(f'imported/{x}', f'imported/{date_string}/{x}')
-         for x in ['hltv_raw.pkl', 'esl_raw.pkl', 'valve_live_raw.pkl']]
+        if incl_esl:
+            [shutil.copy(f'imported/{x}', f'imported/{date_string}/{x}')
+            for x in ['hltv_raw.pkl', 'esl_raw.pkl', 'valve_live_raw.pkl']]
+        else:
+            [shutil.copy(f'imported/{x}', f'imported/{date_string}/{x}')
+            for x in ['hltv_raw.pkl', 'valve_live_raw.pkl']]
 
 
-def import_data(force=False):
+
+def import_data(force=False, incl_esl=False):
     import_ranking(HLTVRankings, 'hltv', force)
-    import_ranking(ESLRankings, 'esl', False)
+    import_ranking(ESLRankings, 'esl', incl_esl and force)
     import_ranking(ValveLiveRankings, 'valve_live', force)
-    copy_to_date_folder(force)
+    copy_to_date_folder(force, incl_esl)
 
 
 if __name__ == "__main__":

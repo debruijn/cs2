@@ -13,7 +13,7 @@ def optimal_score(x):
     # return np.round(np.pow(10, x), 2)
 
 
-def create_output():
+def create_output(incl_esl=False):
 
     # Create all combined ranking table, focused on the "best rank"
     combined_results = pd.read_pickle('output/all_rankings.pkl')
@@ -29,19 +29,22 @@ def create_output():
 
     # Create optimal score table, focused on the "best score"
     score_based_rankings = pd.read_pickle('output/aggregate_scores.pkl')
-    score_based_rankings = score_based_rankings[['median_log_aligned', 'rank_by_median_log_aligned', 'points_esl',
-                                                 'points_hltv', 'points_valve']]
+    score_based_rankings = score_based_rankings[['median_log_aligned', 'rank_by_median_log_aligned',
+                                                 'points_hltv', 'points_valve'] + (['points_esl'] if incl_esl else [])]
     score_based_rankings = score_based_rankings.rename(columns={'median_log_aligned': 'optimal_score',
                                                                 'rank_by_median_log_aligned': 'rank'})
     score_based_rankings['rank'] = score_based_rankings['rank'].transform(int)
     score_based_rankings = score_based_rankings.reset_index().set_index('rank').sort_index()
     score_based_rankings = score_based_rankings.loc[score_based_rankings['optimal_score'] > 0].copy()
     score_based_rankings.optimal_score = score_based_rankings.optimal_score.transform(optimal_score)
-    for col in ['points_esl', 'points_hltv', 'points_valve']:
+    for col in ['points_hltv', 'points_valve'] + (['points_esl'] if incl_esl else []):
         score_based_rankings[col] = score_based_rankings[col].transform(lambda x: "" if np.isnan(x) else str(int(x)))
 
     with open("optimal_score.md", 'w') as out:
-        out.write(score_based_rankings.to_markdown(colalign = ('left', 'left', 'right', 'right', 'right', 'right')))
+        if incl_esl:
+            out.write(score_based_rankings.to_markdown(colalign = ('left', 'left', 'right', 'right', 'right', 'right')))
+        else:
+            out.write(score_based_rankings.to_markdown(colalign=('left', 'left', 'right', 'right', 'right')))
 
 
 if __name__ == "__main__":

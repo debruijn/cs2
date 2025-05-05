@@ -1,244 +1,242 @@
-| rank   | teamname             |   optimal_score |   points_esl |   points_hltv |   points_valve |
-|:-------|:---------------------|----------------:|-------------:|--------------:|---------------:|
-| 1      | Vitality             |            1000 |         2427 |          1000 |           2068 |
-| 2      | Spirit               |             919 |         2123 |           849 |           1920 |
-| 3      | MOUZ                 |             790 |         1363 |           629 |           1973 |
-| 4      | Natus Vincere        |             651 |          961 |           534 |           1709 |
-| 5      | Aurora               |             648 |            4 |           544 |           1817 |
-| 6      | G2                   |             635 |          832 |           430 |           1871 |
-| 7      | The MongolZ          |             613 |         1014 |           419 |           1796 |
-| 8      | Falcons              |             592 |          642 |           254 |           1880 |
-| 9      | FaZe                 |             555 |          643 |           303 |           1813 |
-| 10     | 3DMAX                |             438 |          403 |           198 |           1695 |
-| 11     | Virtus.pro           |             420 |              |           233 |           1643 |
-| 12     | Liquid               |             411 |          592 |           164 |           1530 |
-| 13     | GamerLegion          |             402 |          395 |           188 |           1613 |
-| 14     | Astralis             |             347 |          381 |           134 |           1472 |
-| 15     | paiN                 |             321 |          329 |           101 |           1430 |
-| 16     | Complexity           |             320 |           70 |           138 |           1529 |
-| 17     | FURIA                |             296 |          318 |           103 |           1242 |
-| 18     | SAW                  |             241 |          174 |            88 |           1293 |
-| 19     | MIBR                 |             241 |          210 |            75 |           1176 |
-| 20     | BIG                  |             220 |          247 |            49 |           1016 |
-| 21     | HEROIC               |             218 |          200 |            56 |           1080 |
-| 22     | BetBoom              |             200 |          160 |            46 |           1135 |
-| 23     | M80                  |             183 |           66 |            80 |           1124 |
-| 24     | FlyQuest             |             177 |          118 |            44 |            989 |
-| 25     | Eternal Fire         |             176 |          964 |               |                |
-| 26     | TYLOO                |             169 |           66 |            62 |           1111 |
-| 27     | Rare Atom            |             156 |           27 |            39 |           1193 |
-| 28     | Nemiga               |             154 |           75 |            41 |           1051 |
-| 29     | Apogee               |             154 |              |            52 |           1090 |
-| 30     | B8                   |             150 |           58 |            37 |           1107 |
-| 31     | OG                   |             145 |           37 |            40 |           1115 |
-| 32     | NAVI Junior          |             140 |           30 |            33 |           1141 |
-| 33     | Wildcard             |             138 |              |            39 |           1072 |
-| 34     | ENCE                 |             135 |           48 |            32 |           1045 |
-| 35     | Fnatic               |             133 |           58 |            23 |            985 |
-| 36     | NRG                  |             132 |           45 |            27 |           1043 |
-| 37     | 500                  |             132 |           49 |            19 |           1018 |
-| 38     | Lynn Vision          |             131 |           24 |            35 |           1048 |
-| 39     | Imperial             |             130 |           44 |            33 |           1033 |
-| 40     | BC.Game              |             128 |           49 |            21 |            992 |
-| 41     | 9 Pandas             |             128 |           46 |            23 |           1005 |
-| 42     | Legacy               |             120 |           12 |            38 |            933 |
-| 43     | PARIVISION           |             118 |           36 |            20 |            989 |
-| 44     | ECLOT                |             113 |           35 |            18 |            953 |
-| 45     | Metizport            |             113 |           31 |            26 |            984 |
-| 46     | Fluxo                |             109 |           28 |            21 |            969 |
-| 47     | Passion UA           |             106 |           37 |             7 |            871 |
-| 48     | Getting Info         |             104 |            2 |            17 |           1041 |
-| 49     | The Huns             |             104 |              |            18 |           1022 |
-| 50     | BLUEJAYS             |             103 |           13 |            20 |            984 |
-| 51     | ECSTATIC             |             102 |            4 |            20 |            968 |
-| 52     | 9INE                 |              98 |              |            16 |           1003 |
-| 53     | SINNERS              |              97 |           14 |            18 |            958 |
-| 54     | Chinggis Warriors    |              96 |              |            18 |            948 |
-| 55     | Nexus                |              94 |           18 |            11 |            936 |
-| 56     | Solid                |              94 |           18 |            12 |            933 |
-| 57     | Imperial Valkyries   |              94 |           30 |             5 |            799 |
-| 58     | Spirit Academy       |              93 |            3 |            16 |            949 |
-| 59     | Nouns                |              91 |            8 |            16 |            931 |
-| 60     | BESTIA               |              91 |            8 |            16 |            929 |
-| 61     | Iberian Soul         |              91 |              |            14 |            969 |
-| 62     | TNL                  |              91 |              |            16 |            923 |
-| 63     | Partizan             |              90 |           17 |            13 |            910 |
-| 64     | Sharks               |              86 |              |            14 |            915 |
-| 65     | SemperFi             |              86 |            9 |            11 |            987 |
-| 66     | CYBERSHOKE           |              86 |            4 |            13 |            932 |
-| 67     | GUN5                 |              85 |            6 |            13 |            926 |
-| 68     | HOTU                 |              85 |              |            13 |            918 |
-| 69     | ODDIK                |              84 |            5 |            14 |            885 |
-| 70     | Marsborne            |              83 |            2 |            15 |            856 |
-| 71     | ATOX                 |              82 |            8 |             9 |           1001 |
-| 72     | Eruption             |              81 |              |            11 |            923 |
-| 73     | Ninjas in Pyjamas    |              80 |           12 |            15 |            814 |
-| 74     | Monte                |              79 |           11 |            10 |            889 |
-| 75     | Zero Tenacity        |              79 |              |            13 |            844 |
-| 76     | Housebets            |              78 |           14 |             9 |            814 |
-| 77     | LFO 4                |              77 |              |            12 |            844 |
-| 78     | RUSH B               |              74 |            5 |            10 |            857 |
-| 79     | ex-Aurora            |              73 |              |               |            932 |
-| 80     | ex-TALON             |              72 |            1 |             8 |            904 |
-| 81     | Sashi                |              71 |            6 |            10 |            828 |
-| 82     | Swingers             |              71 |            4 |            10 |            816 |
-| 83     | FAVBET               |              70 |              |             9 |            845 |
-| 84     | NomadS               |              68 |              |             6 |            862 |
-| 85     | RED Canids           |              68 |            7 |             8 |            848 |
-| 86     | Mindfreak            |              68 |           10 |            10 |            753 |
-| 87     | AMKAL                |              68 |            3 |            10 |            773 |
-| 88     | Betera               |              68 |              |             9 |            804 |
-| 89     | Fire Flux            |              67 |              |             8 |            837 |
-| 90     | JiJieHao             |              67 |            1 |             9 |            794 |
-| 91     | Rooster              |              67 |            2 |             8 |            829 |
-| 92     | Leo                  |              67 |              |            11 |            726 |
-| 93     | 9z                   |              66 |            5 |            11 |            712 |
-| 94     | Delta                |              65 |              |             4 |            821 |
-| 95     | vagrants             |              65 |              |            10 |            734 |
-| 96     | CPH Wolves           |              65 |              |             5 |            812 |
-| 97     | FURIA fe             |              65 |              |             3 |            808 |
-| 98     | Fisher College       |              65 |              |            11 |            695 |
-| 99     | RUBY                 |              63 |              |             7 |            788 |
-| 99     | Alliance             |              63 |              |             6 |            788 |
-| 101    | FengDa               |              63 |              |             8 |            776 |
-| 102    | Novaq                |              63 |              |             8 |            775 |
-| 103    | NEVERMORE            |              63 |              |             5 |            781 |
-| 104    | Party Astronauts     |              62 |              |             8 |            755 |
-| 105    | Gaimin Gladiators    |              62 |              |               |            762 |
-| 105    | Sangal               |              62 |              |             6 |            762 |
-| 107    | NAVI Javelins        |              62 |              |               |            760 |
-| 107    | Rebels               |              62 |            1 |             6 |            760 |
-| 109    | Spray Jutsu          |              61 |              |             4 |            751 |
-| 109    | IHC                  |              61 |              |             4 |            751 |
-| 111    | DogEvil              |              61 |              |             8 |            739 |
-| 112    | UNiTY                |              61 |            1 |             4 |            750 |
-| 113    | Prototype Blaze      |              61 |              |               |            747 |
-| 114    | WildLotus            |              61 |              |             8 |            735 |
-| 115    | THE                  |              60 |              |             7 |            739 |
-| 116    | GTZ                  |              60 |              |             5 |            738 |
-| 117    | Johnny Speeds        |              60 |              |             8 |            723 |
-| 118    | Just Swing           |              60 |              |             6 |            733 |
-| 119    | Chimera              |              60 |              |             6 |            732 |
-| 120    | JANO                 |              60 |              |             3 |            731 |
-| 121    | ARCRED               |              60 |              |             5 |            729 |
-| 122    | ShindeN              |              60 |            5 |             5 |            728 |
-| 123    | SUPER EVIL GANG      |              60 |              |             9 |            679 |
-| 124    | ALASKA               |              60 |              |             3 |            727 |
-| 125    | Bad News Capybaras   |              60 |              |             8 |            714 |
-| 126    | MIBR fe              |              60 |              |             2 |            725 |
-| 127    | BIG EQUIPA           |              59 |              |               |            720 |
-| 128    | Cloud9               |              59 |              |               |            714 |
-| 129    | ALTERNATE aTTaX      |              59 |              |               |            713 |
-| 130    | Tropa do VSM         |              59 |              |               |            712 |
-| 131    | Flamengo             |              59 |              |             8 |            699 |
-| 132    | Dusty Roots          |              58 |              |             6 |            704 |
-| 134    | Gods Reign           |              58 |              |             7 |            703 |
-| 134    | Flshbck              |              58 |              |             2 |            703 |
-| 134    | Bounty Hunters       |              58 |            6 |             6 |            703 |
-| 136    | Arrow                |              58 |              |               |            702 |
-| 137    | anything else        |              58 |              |               |            701 |
-| 138    | EYEBALLERS           |              58 |              |             6 |            697 |
-| 139    | Victores Sumus       |              58 |              |             2 |            692 |
-| 140    | kONO                 |              58 |              |             5 |            691 |
-| 141    | 8Sins                |              58 |              |             3 |            690 |
-| 141    | Supernova Comets     |              58 |              |             5 |            690 |
-| 143    | -72c                 |              57 |              |             3 |            688 |
-| 144    | MIGHT                |              57 |            1 |             7 |            687 |
-| 146    | KRÜ                  |              57 |            2 |             5 |            686 |
-| 146    | LOBOARMY             |              57 |              |             4 |            686 |
-| 146    | NIP Impact           |              57 |              |               |            686 |
-| 148    | Lumen fe             |              57 |              |               |            685 |
-| 149    | Only One Word        |              57 |            0 |             5 |            684 |
-| 150    | Chicken Coop         |              57 |              |             6 |            681 |
-| 151    | Wanted Goons         |              57 |              |             5 |            680 |
-| 151    | Undone               |              57 |              |               |            680 |
-| 153    | Kubix                |              57 |              |             5 |            678 |
-| 154    | Tsunami              |              57 |              |             4 |            675 |
-| 155    | WOPA                 |              57 |              |             3 |            674 |
-| 156    | adalYamigos          |              57 |            2 |               |            673 |
-| 157    | GenOne               |              57 |              |             6 |            672 |
-| 157    | ENCE Academy         |              57 |              |             2 |            672 |
-| 159    | GameAgents           |              56 |              |               |            671 |
-| 160    | Garden Garage        |              56 |              |               |            670 |
-| 161    | Eco Warriors         |              56 |              |               |            669 |
-| 162    | Endpoint             |              56 |              |               |            665 |
-| 163    | O PLANO              |              56 |              |               |            662 |
-| 164    | Yawara               |              56 |              |             4 |            658 |
-| 164    | Dark Cloud           |              56 |              |               |            658 |
-| 166    | FORZE Reload         |              56 |              |             3 |            657 |
-| 167    | Wildcard Academy     |              56 |              |             4 |            656 |
-| 167    | GameHunters          |              56 |              |             6 |            656 |
-| 169    | UNO MILLE            |              56 |              |               |            653 |
-| 169    | Marca Registrada     |              56 |              |             4 |            653 |
-| 171    | MANTRA               |              55 |              |             4 |            652 |
-| 172    | Immigrants peek      |              55 |              |             6 |            651 |
-| 173    | Mythic               |              55 |              |            10 |            569 |
-| 174    | FlyQuest RED         |              55 |              |             2 |            648 |
-| 175    | 2GAME                |              55 |              |             6 |            647 |
-| 176    | Players              |              55 |            3 |             3 |            644 |
-| 177    | PCIFIC               |              55 |              |             4 |            641 |
-| 178    | K27                  |              55 |              |             2 |            640 |
-| 179    | Preasy               |              55 |              |             2 |            639 |
-| 179    | USA fe               |              55 |              |               |            639 |
-| 182    | Illuminar            |              55 |              |               |            638 |
-| 182    | NinJa                |              55 |              |             5 |            638 |
-| 182    | SINNERS Academy      |              55 |              |               |            638 |
-| 184    | Hesta                |              55 |              |             5 |            635 |
-| 185    | Nouns fe             |              54 |              |               |            633 |
-| 186    | 1WIN                 |              54 |              |             5 |            631 |
-| 187    | Akimbo               |              54 |              |             5 |            630 |
-| 187    | Let Her Cook         |              54 |              |               |            630 |
-| 189    | Kappa Bar            |              54 |              |               |            628 |
-| 190    | AKA HERO KAJO        |              54 |              |               |            626 |
-| 191    | Sampi                |              54 |              |               |            623 |
-| 193    | Ghost                |              54 |              |               |            621 |
-| 193    | Quem Sao Elas        |              54 |              |               |            621 |
-| 193    | Roler Coaster        |              54 |              |               |            621 |
-| 195    | Black Mold           |              54 |              |               |            619 |
-| 196    | LEON                 |              54 |              |               |            616 |
-| 197    | Rhyno                |              53 |              |             2 |            615 |
-| 197    | ex-Heimo             |              53 |              |             3 |            615 |
-| 199    | MIBR Academy         |              53 |              |               |            614 |
-| 200    | FLuffy Gangsters     |              53 |              |               |            613 |
-| 200    | DMS                  |              53 |              |               |            613 |
-| 203    | RED Canids Academy   |              53 |              |               |            612 |
-| 203    | Underground          |              53 |              |             2 |            612 |
-| 203    | Big W                |              53 |              |               |            612 |
-| 205    | Bounty Hunters fe    |              53 |              |               |            609 |
-| 205    | Hungary              |              53 |              |               |            609 |
-| 207    | Bad News Chickens    |              53 |              |               |            608 |
-| 208    | Tricked              |              53 |              |             7 |            607 |
-| 209    | Astralis Talent      |              53 |              |             5 |            606 |
-| 209    | BRUTE                |              53 |              |               |            606 |
-| 212    | ex-GR                |              53 |              |               |            598 |
-| 212    | timbermen            |              53 |            1 |             3 |            598 |
-| 212    | Nuclear TigeRES      |              53 |              |             5 |            598 |
-| 214    | thekillaz fe         |              52 |              |               |            593 |
-| 215    | 2070                 |              52 |              |             2 |            591 |
-| 216    | Spray and Slay       |              52 |              |               |            590 |
-| 217    | Prasso               |              52 |              |               |            588 |
-| 218    | Akuma                |              52 |              |               |            585 |
-| 218    | Floripa Stars        |              52 |              |             3 |            585 |
-| 220    | Change The Game      |              52 |              |             4 |            584 |
-| 221    | CS2News Ladies       |              52 |              |               |            578 |
-| 222    | NITRO                |              52 |              |             5 |            577 |
-| 223    | Viperio              |              51 |              |             2 |            574 |
-| 224    | Adventurers          |              51 |              |               |            573 |
-| 224    | POWERmix             |              51 |              |               |            573 |
-| 226    | harizma              |              51 |              |             3 |            572 |
-| 226    | Insilio              |              51 |              |             7 |            572 |
-| 228    | KZG                  |              51 |              |             3 |            570 |
-| 229    | The QUBE             |              51 |              |             2 |            564 |
-| 229    | SkyFury              |              51 |              |             3 |            564 |
-| 231    | paiN Academy         |              51 |              |             3 |            563 |
-| 232    | MEGA JUNERS          |              51 |              |               |            559 |
-| 233    | Shika                |              51 |              |             4 |            558 |
-| 234    | st4rboys             |              50 |              |               |            556 |
-| 235    | Messitas             |              50 |              |               |            555 |
-| 235    | Vantage              |              50 |            2 |               |            555 |
-| 237    | Justice For Tomorrow |              50 |            1 |               |            553 |
-| 237    | Worms                |              50 |              |             3 |            553 |
-| 239    | Betclic Apogee       |              50 |            7 |               |                |
-| 240    | ScarX                |              50 |              |             3 |            549 |
-| 241    | InControl            |              50 |              |             4 |            545 |
-| 242    | Take Flyte           |              50 |              |             7 |            543 |
+| rank   | teamname             |   optimal_score |   points_hltv |   points_valve |
+|:-------|:---------------------|----------------:|--------------:|---------------:|
+| 1      | Vitality             |            1000 |          1000 |           2068 |
+| 2      | Spirit               |             904 |           849 |           1920 |
+| 3      | MOUZ                 |             830 |           629 |           1973 |
+| 4      | Falcons              |             691 |           254 |           1880 |
+| 5      | Aurora               |             687 |           544 |           1817 |
+| 6      | Natus Vincere        |             679 |           534 |           1709 |
+| 7      | G2                   |             679 |           430 |           1871 |
+| 8      | FaZe                 |             606 |           303 |           1813 |
+| 9      | The MongolZ          |             586 |           419 |           1796 |
+| 10     | 3DMAX                |             480 |           198 |           1695 |
+| 11     | Virtus.pro           |             434 |           233 |           1643 |
+| 12     | GamerLegion          |             409 |           188 |           1613 |
+| 13     | Liquid               |             347 |           164 |           1530 |
+| 14     | Complexity           |             346 |           138 |           1529 |
+| 15     | Astralis             |             310 |           134 |           1472 |
+| 16     | paiN                 |             285 |           101 |           1430 |
+| 17     | FURIA                |             246 |           103 |           1242 |
+| 18     | SAW                  |             224 |            88 |           1293 |
+| 19     | M80                  |             211 |            80 |           1124 |
+| 20     | MIBR                 |             203 |            75 |           1176 |
+| 21     | TYLOO                |             180 |            62 |           1111 |
+| 22     | Rare Atom            |             179 |            39 |           1193 |
+| 23     | HEROIC               |             169 |            56 |           1080 |
+| 24     | Apogee               |             162 |            52 |           1090 |
+| 25     | NAVI Junior          |             162 |            33 |           1141 |
+| 26     | BetBoom              |             160 |            46 |           1135 |
+| 27     | BIG                  |             156 |            49 |           1016 |
+| 28     | OG                   |             153 |            40 |           1115 |
+| 29     | B8                   |             151 |            37 |           1107 |
+| 30     | FlyQuest             |             146 |            44 |            989 |
+| 31     | Wildcard             |             141 |            39 |           1072 |
+| 32     | Nemiga               |             140 |            41 |           1051 |
+| 33     | Lynn Vision          |             135 |            35 |           1048 |
+| 34     | ENCE                 |             134 |            32 |           1045 |
+| 35     | NRG                  |             133 |            27 |           1043 |
+| 36     | Legacy               |             133 |            38 |            933 |
+| 37     | Getting Info         |             133 |            17 |           1041 |
+| 38     | Imperial             |             131 |            33 |           1033 |
+| 39     | The Huns             |             128 |            18 |           1022 |
+| 40     | 500                  |             127 |            19 |           1018 |
+| 41     | 9 Pandas             |             124 |            23 |           1005 |
+| 42     | 9INE                 |             123 |            16 |           1003 |
+| 43     | ATOX                 |             123 |             9 |           1001 |
+| 44     | BC.Game              |             121 |            21 |            992 |
+| 45     | PARIVISION           |             120 |            20 |            989 |
+| 46     | SemperFi             |             119 |            11 |            987 |
+| 47     | Fnatic               |             119 |            23 |            985 |
+| 48     | Metizport            |             119 |            26 |            984 |
+| 48     | BLUEJAYS             |             119 |            20 |            984 |
+| 50     | Fluxo                |             115 |            21 |            969 |
+| 50     | Iberian Soul         |             115 |            14 |            969 |
+| 52     | ECSTATIC             |             115 |            20 |            968 |
+| 53     | SINNERS              |             113 |            18 |            958 |
+| 54     | ECLOT                |             112 |            18 |            953 |
+| 55     | Spirit Academy       |             111 |            16 |            949 |
+| 56     | Chinggis Warriors    |             111 |            18 |            948 |
+| 57     | Nexus                |             108 |            11 |            936 |
+| 58     | Solid                |             107 |            12 |            933 |
+| 59     | CYBERSHOKE           |             107 |            13 |            932 |
+| 59     | ex-Aurora            |             107 |               |            932 |
+| 61     | Nouns                |             107 |            16 |            931 |
+| 62     | BESTIA               |             106 |            16 |            929 |
+| 63     | GUN5                 |             106 |            13 |            926 |
+| 64     | Eruption             |             105 |            11 |            923 |
+| 64     | TNL                  |             105 |            16 |            923 |
+| 66     | HOTU                 |             104 |            13 |            918 |
+| 67     | Sharks               |             104 |            14 |            915 |
+| 68     | Partizan             |             103 |            13 |            910 |
+| 69     | ex-TALON             |             101 |             8 |            904 |
+| 70     | Monte                |              98 |            10 |            889 |
+| 71     | ODDIK                |              98 |            14 |            885 |
+| 72     | Passion UA           |              95 |             7 |            871 |
+| 73     | NomadS               |              93 |             6 |            862 |
+| 74     | RUSH B               |              92 |            10 |            857 |
+| 75     | Marsborne            |              92 |            15 |            856 |
+| 76     | RED Canids           |              91 |             8 |            848 |
+| 77     | FAVBET               |              90 |             9 |            845 |
+| 78     | LFO 4                |              90 |            12 |            844 |
+| 78     | Zero Tenacity        |              90 |            13 |            844 |
+| 80     | Fire Flux            |              89 |             8 |            837 |
+| 81     | Rooster              |              87 |             8 |            829 |
+| 82     | Sashi                |              87 |            10 |            828 |
+| 83     | Delta                |              86 |             4 |            821 |
+| 84     | Swingers             |              85 |            10 |            816 |
+| 85     | Housebets            |              85 |             9 |            814 |
+| 85     | Ninjas in Pyjamas    |              85 |            15 |            814 |
+| 87     | CPH Wolves           |              85 |             5 |            812 |
+| 88     | FURIA fe             |              84 |             3 |            808 |
+| 89     | Betera               |              83 |             9 |            804 |
+| 90     | Imperial Valkyries   |              82 |             5 |            799 |
+| 91     | JiJieHao             |              82 |             9 |            794 |
+| 92     | Alliance             |              81 |             6 |            788 |
+| 92     | RUBY                 |              81 |             7 |            788 |
+| 94     | NEVERMORE            |              80 |             5 |            781 |
+| 95     | FengDa               |              79 |             8 |            776 |
+| 96     | Novaq                |              79 |             8 |            775 |
+| 97     | AMKAL                |              78 |            10 |            773 |
+| 98     | Sangal               |              77 |             6 |            762 |
+| 98     | Gaimin Gladiators    |              77 |               |            762 |
+| 100    | NAVI Javelins        |              76 |               |            760 |
+| 100    | Rebels               |              76 |             6 |            760 |
+| 102    | Party Astronauts     |              76 |             8 |            755 |
+| 103    | Mindfreak            |              75 |            10 |            753 |
+| 104    | IHC                  |              75 |             4 |            751 |
+| 104    | Spray Jutsu          |              75 |             4 |            751 |
+| 106    | UNiTY                |              75 |             4 |            750 |
+| 107    | Prototype Blaze      |              74 |               |            747 |
+| 108    | THE                  |              73 |             7 |            739 |
+| 108    | DogEvil              |              73 |             8 |            739 |
+| 110    | GTZ                  |              73 |             5 |            738 |
+| 111    | WildLotus            |              73 |             8 |            735 |
+| 112    | vagrants             |              73 |            10 |            734 |
+| 113    | Just Swing           |              72 |             6 |            733 |
+| 114    | Chimera              |              72 |             6 |            732 |
+| 115    | JANO                 |              72 |             3 |            731 |
+| 116    | ARCRED               |              72 |             5 |            729 |
+| 117    | ShindeN              |              72 |             5 |            728 |
+| 118    | ALASKA               |              72 |             3 |            727 |
+| 119    | Leo                  |              71 |            11 |            726 |
+| 120    | MIBR fe              |              71 |             2 |            725 |
+| 121    | Johnny Speeds        |              71 |             8 |            723 |
+| 122    | BIG EQUIPA           |              71 |               |            720 |
+| 123    | Bad News Capybaras   |              70 |             8 |            714 |
+| 123    | Cloud9               |              70 |               |            714 |
+| 125    | ALTERNATE aTTaX      |              70 |               |            713 |
+| 126    | 9z                   |              69 |            11 |            712 |
+| 126    | Tropa do VSM         |              69 |               |            712 |
+| 128    | Dusty Roots          |              68 |             6 |            704 |
+| 130    | Flshbck              |              68 |             2 |            703 |
+| 130    | Bounty Hunters       |              68 |             6 |            703 |
+| 130    | Gods Reign           |              68 |             7 |            703 |
+| 132    | Arrow                |              68 |               |            702 |
+| 133    | anything else        |              68 |               |            701 |
+| 134    | Flamengo             |              68 |             8 |            699 |
+| 135    | EYEBALLERS           |              67 |             6 |            697 |
+| 136    | Fisher College       |              67 |            11 |            695 |
+| 137    | Victores Sumus       |              67 |             2 |            692 |
+| 138    | kONO                 |              67 |             5 |            691 |
+| 139    | Supernova Comets     |              67 |             5 |            690 |
+| 139    | 8Sins                |              67 |             3 |            690 |
+| 141    | -72c                 |              66 |             3 |            688 |
+| 142    | MIGHT                |              66 |             7 |            687 |
+| 144    | NIP Impact           |              66 |               |            686 |
+| 144    | KRÜ                  |              66 |             5 |            686 |
+| 144    | LOBOARMY             |              66 |             4 |            686 |
+| 146    | Lumen fe             |              66 |               |            685 |
+| 147    | Only One Word        |              66 |             5 |            684 |
+| 148    | Chicken Coop         |              65 |             6 |            681 |
+| 149    | Wanted Goons         |              65 |             5 |            680 |
+| 149    | Undone               |              65 |               |            680 |
+| 151    | SUPER EVIL GANG      |              65 |             9 |            679 |
+| 152    | Kubix                |              65 |             5 |            678 |
+| 153    | Tsunami              |              65 |             4 |            675 |
+| 154    | WOPA                 |              64 |             3 |            674 |
+| 155    | adalYamigos          |              64 |               |            673 |
+| 156    | GenOne               |              64 |             6 |            672 |
+| 156    | ENCE Academy         |              64 |             2 |            672 |
+| 158    | GameAgents           |              64 |               |            671 |
+| 159    | Garden Garage        |              64 |               |            670 |
+| 160    | Eco Warriors         |              64 |               |            669 |
+| 161    | Endpoint             |              63 |               |            665 |
+| 162    | O PLANO              |              63 |               |            662 |
+| 163    | Dark Cloud           |              62 |               |            658 |
+| 163    | Yawara               |              62 |             4 |            658 |
+| 165    | FORZE Reload         |              62 |             3 |            657 |
+| 166    | GameHunters          |              62 |             6 |            656 |
+| 166    | Wildcard Academy     |              62 |             4 |            656 |
+| 168    | Marca Registrada     |              62 |             4 |            653 |
+| 168    | UNO MILLE            |              62 |               |            653 |
+| 170    | MANTRA               |              62 |             4 |            652 |
+| 171    | Immigrants peek      |              62 |             6 |            651 |
+| 172    | FlyQuest RED         |              61 |             2 |            648 |
+| 173    | 2GAME                |              61 |             6 |            647 |
+| 174    | Players              |              61 |             3 |            644 |
+| 175    | PCIFIC               |              60 |             4 |            641 |
+| 176    | K27                  |              60 |             2 |            640 |
+| 177    | USA fe               |              60 |               |            639 |
+| 177    | Preasy               |              60 |             2 |            639 |
+| 180    | SINNERS Academy      |              60 |               |            638 |
+| 180    | NinJa                |              60 |             5 |            638 |
+| 180    | Illuminar            |              60 |               |            638 |
+| 182    | Hesta                |              60 |             5 |            635 |
+| 183    | Nouns fe             |              59 |               |            633 |
+| 184    | 1WIN                 |              59 |             5 |            631 |
+| 185    | Let Her Cook         |              59 |               |            630 |
+| 185    | Akimbo               |              59 |             5 |            630 |
+| 187    | Kappa Bar            |              59 |               |            628 |
+| 188    | AKA HERO KAJO        |              59 |               |            626 |
+| 189    | Mythic               |              58 |            10 |            569 |
+| 190    | Sampi                |              58 |               |            623 |
+| 192    | Roler Coaster        |              58 |               |            621 |
+| 192    | Quem Sao Elas        |              58 |               |            621 |
+| 192    | Ghost                |              58 |               |            621 |
+| 194    | Black Mold           |              58 |               |            619 |
+| 195    | LEON                 |              58 |               |            616 |
+| 196    | Rhyno                |              57 |             2 |            615 |
+| 196    | ex-Heimo             |              57 |             3 |            615 |
+| 198    | MIBR Academy         |              57 |               |            614 |
+| 199    | DMS                  |              57 |               |            613 |
+| 199    | FLuffy Gangsters     |              57 |               |            613 |
+| 202    | RED Canids Academy   |              57 |               |            612 |
+| 202    | Underground          |              57 |             2 |            612 |
+| 202    | Big W                |              57 |               |            612 |
+| 204    | Hungary              |              57 |               |            609 |
+| 204    | Bounty Hunters fe    |              57 |               |            609 |
+| 206    | Bad News Chickens    |              57 |               |            608 |
+| 207    | Tricked              |              57 |             7 |            607 |
+| 208    | Astralis Talent      |              56 |             5 |            606 |
+| 208    | BRUTE                |              56 |               |            606 |
+| 211    | ex-GR                |              56 |               |            598 |
+| 211    | Nuclear TigeRES      |              56 |             5 |            598 |
+| 211    | timbermen            |              56 |             3 |            598 |
+| 213    | thekillaz fe         |              55 |               |            593 |
+| 214    | 2070                 |              55 |             2 |            591 |
+| 215    | Spray and Slay       |              55 |               |            590 |
+| 216    | Prasso               |              54 |               |            588 |
+| 217    | Akuma                |              54 |               |            585 |
+| 217    | Floripa Stars        |              54 |             3 |            585 |
+| 219    | Change The Game      |              54 |             4 |            584 |
+| 220    | CS2News Ladies       |              53 |               |            578 |
+| 221    | NITRO                |              53 |             5 |            577 |
+| 222    | Viperio              |              53 |             2 |            574 |
+| 223    | POWERmix             |              53 |               |            573 |
+| 223    | Adventurers          |              53 |               |            573 |
+| 225    | Insilio              |              53 |             7 |            572 |
+| 225    | harizma              |              53 |             3 |            572 |
+| 227    | KZG                  |              53 |             3 |            570 |
+| 228    | SkyFury              |              52 |             3 |            564 |
+| 228    | The QUBE             |              52 |             2 |            564 |
+| 230    | paiN Academy         |              52 |             3 |            563 |
+| 231    | MEGA JUNERS          |              51 |               |            559 |
+| 232    | Shika                |              51 |             4 |            558 |
+| 233    | st4rboys             |              51 |               |            556 |
+| 234    | Vantage              |              51 |               |            555 |
+| 234    | Messitas             |              51 |               |            555 |
+| 236    | Justice For Tomorrow |              51 |               |            553 |
+| 236    | Worms                |              51 |             3 |            553 |
+| 238    | ScarX                |              50 |             3 |            549 |
+| 239    | InControl            |              50 |             4 |            545 |
+| 240    | Take Flyte           |              50 |             7 |            543 |

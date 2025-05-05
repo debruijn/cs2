@@ -13,9 +13,9 @@ def lin_scale(x, refs, targets):
     return max(targets[0] - (refs[0] - x) * (targets[0] - targets[1]) / (refs[0] - refs[1]), 0)
 
 
-def create_rank_based_rankings(data):
+def create_rank_based_rankings(data, incl_esl=False):
     data = data.filter(like='rank')
-    rank_cols = ['rank_esl', 'rank_hltv', 'rank_valve']
+    rank_cols = ['rank_esl', 'rank_hltv', 'rank_valve'] if incl_esl else ['rank_hltv', 'rank_valve']
 
     # Fill in missings with the column max + 1 (since we can't know further)
     # Later on: we could make a data augmentation model, but that might be too complicated for this project
@@ -31,10 +31,10 @@ def create_rank_based_rankings(data):
     return data
 
 
-def create_score_based_rankings(data):
+def create_score_based_rankings(data, incl_esl=False):
     data = data.filter(like='points').copy()
 
-    point_cols = ['points_esl', 'points_hltv', 'points_valve']
+    point_cols = ['points_esl', 'points_hltv', 'points_valve'] if incl_esl else ['points_hltv', 'points_valve']
     for col in point_cols:
         # Create linearly scaled points, with factor such that average of top 10 is 1000 points
         mean_top_10 = np.mean(sorted(data[col].values, key=lambda x: int(x) if not np.isnan(x) else 0,
@@ -81,13 +81,13 @@ def aggregate_ranking(raw, rank_based, score_based):
     return combined
 
 
-def create_rankings():
+def create_rankings(incl_esl=False):
 
     # Read in unified data (by team)
     data = pd.read_pickle('unified/on_team.pkl')
 
     # Run rank-based rankings
-    rank_based_rankings = create_rank_based_rankings(data)
+    rank_based_rankings = create_rank_based_rankings(data, incl_esl)
 
     # Run score-based rankings
     score_based_rankings = create_score_based_rankings(data)

@@ -7,15 +7,18 @@ pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
-def get_raw_data():
+def get_raw_data(incl_esl=False):
     path = 'imported/'
     hltv = pd.read_pickle(path + 'hltv_raw.pkl')
-    esl = pd.read_pickle(path + 'esl_raw.pkl')
     valve = pd.read_pickle(path + 'valve_live_raw.pkl')
 
     # Filter out low scoring teams in HLTV for now
     hltv = hltv.loc[hltv.points > 1].copy()
-    return hltv, esl, valve
+
+    if incl_esl:
+        esl = pd.read_pickle(path + 'esl_raw.pkl')
+        return hltv, esl, valve
+    return hltv, valve
 
 
 def copy_to_date_folder(force=False):
@@ -108,10 +111,14 @@ def clean_teamname_mapping(teamname_df, clean=False):
     return teamname_df
 
 
-def run_unification():
-    hltv, esl, valve = get_raw_data()
+def run_unification(incl_esl=False):
+    if incl_esl:
+        hltv, esl, valve = get_raw_data(incl_esl)
+    else:
+        hltv, valve = get_raw_data(incl_esl)
     hltv = hltv.rename(columns={'position': 'rank', 'name': 'teamname'})
-    esl = esl.rename(columns={'position': 'rank', 'name': 'teamname'})
+    if incl_esl:
+        esl = esl.rename(columns={'position': 'rank', 'name': 'teamname'})
     valve = valve.rename(columns={'position': 'rank', 'name': 'teamname'})
 
     # Load in teamname_mapping, rosters, and player_mapping from earlier runs
@@ -124,7 +131,8 @@ def run_unification():
     # Use the ranking dfs to update teamname_mapping and rosters with potential new teams or roster changes
     teamname_mapping, rosters = update_teamnames_rosters(valve, teamname_mapping, rosters, player_mapping)
     teamname_mapping, rosters = update_teamnames_rosters(hltv, teamname_mapping, rosters, player_mapping)
-    teamname_mapping, rosters = update_teamnames_rosters(esl, teamname_mapping, rosters, player_mapping)
+    if incl_esl:
+        teamname_mapping, rosters = update_teamnames_rosters(esl, teamname_mapping, rosters, player_mapping)
 
     # Clean old teams/duplicate rosters and sort by teamname for easy comparison
     teamname_mapping = clean_teamname_mapping(teamname_mapping)
@@ -136,7 +144,8 @@ def run_unification():
 
     # Apply renaming of teams to each ranking
     hltv['teamname'] = hltv['teamname'].apply(lambda x: teamname_mapping.loc[x].values[0])
-    esl['teamname'] = esl['teamname'].apply(lambda x: teamname_mapping.loc[x].values[0]
+    if incl_esl:
+        esl['teamname'] = esl['teamname'].apply(lambda x: teamname_mapping.loc[x].values[0]
                                                     if x in teamname_mapping.index else x)
     valve['teamname'] = valve['teamname'].apply(lambda x: teamname_mapping.loc[x].values[0]
                                                     if x in teamname_mapping.index else x)
@@ -149,15 +158,26 @@ def run_unification():
     valve = valve.drop_duplicates(subset='teamname', keep='first')
     valve['rank'] = valve['points'].rank(ascending=False, method='first')
 
-    unified_on_rank = (esl.merge(valve, how="outer", on='rank', suffixes=["_esl", "_valve"]).
-                       merge(hltv.rename(columns={"teamname": "teamname_hltv", "points": "points_hltv"}),
-                             on='rank', how='left'))
-    unified_on_rank = unified_on_rank.set_index('rank')
+    if incl_esl:
+        unified_on_rank = (esl.merge(valve, how="outer", on='rank', suffixes=["_esl", "_valve"]).
+                           merge(hltv.rename(columns={"teamname": "teamname_hltv", "points": "points_hltv"}),
+                                 on='rank', how='left'))
+        unified_on_rank = unified_on_rank.set_index('rank')
 
-    unified_on_team = (esl.merge(valve, how="outer", on='teamname', suffixes=["_esl", "_valve"]).
-                       merge(hltv.rename(columns={"rank": "rank_hltv", "points": "points_hltv"}),
-                             on='teamname', how='left'))
-    unified_on_team = unified_on_team.set_index('teamname')
+        unified_on_team = (esl.merge(valve, how="outer", on='teamname', suffixes=["_esl", "_valve"]).
+                           merge(hltv.rename(columns={"rank": "rank_hltv", "points": "points_hltv"}),
+                                 on='teamname', how='left'))
+        unified_on_team = unified_on_team.set_index('teamname')
+    else:
+        unified_on_rank = (valve.rename(columns={"teamname": "teamname_valve", "points": "points_valve"})
+                           .merge(hltv.rename(columns={"teamname": "teamname_hltv", "points": "points_hltv"}),
+                                 on='rank', how='left'))
+        unified_on_rank = unified_on_rank.set_index('rank')
+
+        unified_on_team = (valve.rename(columns={"rank": "rank_valve", "points": "points_valve"})
+                           .merge(hltv.rename(columns={"rank": "rank_hltv", "points": "points_hltv"}),
+                                 on='teamname', how='left'))
+        unified_on_team = unified_on_team.set_index('teamname')
 
     if not filefolder_exists('unified'):
         os.mkdir('unified')
